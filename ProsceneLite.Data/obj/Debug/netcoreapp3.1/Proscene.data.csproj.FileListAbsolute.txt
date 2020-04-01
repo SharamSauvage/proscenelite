@@ -1,0 +1,12 @@
+C:\Users\A273168\source\repos\Proscene.data\bin\Debug\netcoreapp3.1\Proscene.data.deps.json
+C:\Users\A273168\source\repos\Proscene.data\bin\Debug\netcoreapp3.1\Proscene.data.dll
+C:\Users\A273168\source\repos\Proscene.data\obj\Debug\netcoreapp3.1\Proscene.data.AssemblyInfoInputs.cache
+C:\Users\A273168\source\repos\Proscene.data\obj\Debug\netcoreapp3.1\Proscene.data.AssemblyInfo.cs
+C:\Users\A273168\source\repos\Proscene.data\bin\Debug\netcoreapp3.1\Proscene.data.runtimeconfig.json
+C:\Users\A273168\source\repos\Proscene.data\bin\Debug\netcoreapp3.1\Proscene.data.runtimeconfig.dev.json
+C:\Users\A273168\source\repos\Proscene.data\obj\Debug\netcoreapp3.1\Proscene.data.csproj.CoreCompileInputs.cache
+C:\Users\A273168\source\repos\Proscene.data\bin\Debug\netcoreapp3.1\Proscene.data.pdb
+C:\Users\A273168\source\repos\Proscene.data\obj\Debug\netcoreapp3.1\Proscene.data.dll
+C:\Users\A273168\source\repos\Proscene.data\obj\Debug\netcoreapp3.1\Proscene.data.pdb
+C:\Users\A273168\source\repos\Proscene.data\obj\Debug\netcoreapp3.1\Proscene.data.genruntimeconfig.cache
+C:\Users\A273168\source\repos\Proscene.data\obj\Debug\netcoreapp3.1\Proscene.data.csprojAssemblyReference.cache

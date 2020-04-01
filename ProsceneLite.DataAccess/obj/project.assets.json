@@ -1,0 +1,109 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj",
+      "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\A273168\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\ProsceneLite.DataAccess\\ProsceneLite.DataAccess.csproj",
+      "projectName": "ProsceneLite.DataAccess",
+      "projectPath": "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\ProsceneLite.DataAccess\\ProsceneLite.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\A273168\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\ProsceneLite.DataAccess\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\A273168\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj": {
+              "projectPath": "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj"
+            },
+            "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj": {
+              "projectPath": "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Projet 'C:\\Users\\A273168\\source\\repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
+      "libraryId": "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Projet 'C:\\Users\\A273168\\source\\repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
+      "libraryId": "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}
