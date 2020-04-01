@@ -17,7 +17,7 @@ namespace ProsceneLite.Data
         #region Champs
         public string NomSpot { get; set; }
         public Guid? TypeSpotId { get; set; } //zone instanciée, décor en jeu, escape room etc...
-        public Guid? StatuValidId { get; set; }
+        public int? StatuValidId { get; set; }
         public Byte[] Img { get; set; }
 
         #endregion
@@ -26,9 +26,7 @@ namespace ProsceneLite.Data
         [ForeignKey(nameof(TypeSpotId))]
         public virtual TypoSpot TypoSpot
         { get; set; }
-        [ForeignKey(nameof(StatuValidId))]
-        public virtual StatutValidation StatutValidation
-        { get; set; }
+        
         #endregion
 
         

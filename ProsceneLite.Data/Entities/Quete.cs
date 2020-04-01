@@ -18,7 +18,7 @@ namespace ProsceneLite.Data
         [Required]
         public string TitreQuete { get; set; }
         public Guid? ReferentId { get; set; }
-        public Guid? StatuValidId { get; set; }
+        public int? StatuValidId { get; set; }
         public Guid? TypoQueteId { get; set; }
         public Guid? ProjetId { get; set; }
         #endregion
@@ -36,12 +36,7 @@ namespace ProsceneLite.Data
             get;
             set;
         }
-        [ForeignKey(nameof(StatuValidId))]
-        public StatutValidation StatutValidation
-        {
-            get;
-            set;
-        }
+        
         [ForeignKey(nameof(ProjetId))]
         public virtual Projet Projet
         { get; set; }

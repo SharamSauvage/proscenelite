@@ -21,9 +21,9 @@ namespace ProsceneLite.Data
         public string SituationDebJeu { get; set; }
         public string Effet { get; set; }
         public Byte[] Image { get; set; }
-        public Guid PPLieId { get; set; }
-        public Guid StatuValidId { get; set; }
-        public Guid StockId { get; set; }
+        public Guid? PPLieId { get; set; }
+        public int? StatuValidId { get; set; }
+        public Guid? StockId { get; set; }
         public bool? ExisteDeja { get; set; }
         public bool? EstDisponible { get; set; }
         public bool? EstDemande { get; set; }
@@ -37,12 +37,12 @@ namespace ProsceneLite.Data
         [ForeignKey(nameof(PPLieId))]
         public virtual PlotPointsQuete PlotPointsQuete
         { get; set; }
-        [ForeignKey(nameof(StatuValidId))]
-        public virtual StatutValidation StatutValidation
-        { get; set; }
+        
+        /*
         [ForeignKey(nameof(StockId))]
         public virtual StockEntrepot StockEntrepot
         { get; set; }
+        */
         #endregion
 
         

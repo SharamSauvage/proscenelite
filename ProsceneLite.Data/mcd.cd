@@ -22,7 +22,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Pays">
-    <Position X="13.5" Y="1.5" Width="1.5" />
+    <Position X="13.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Entities\Pays.cs</FileName>
@@ -82,7 +82,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.TypoQuete">
-    <Position X="9.5" Y="6.5" Width="1.5" />
+    <Position X="9.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>Entities\TypoQuete.cs</FileName>
@@ -91,22 +91,14 @@
   <Class Name="ProsceneLite.Data.Quete">
     <Position X="9.5" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAECIIAAAEAAAFAAAIAAAAAAAAAAgAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AAECIIAAAEAAAFAAAIAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Entities\Quete.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Utilisateurs" />
       <Property Name="TypoQuete" />
-      <Property Name="StatutValidation" />
       <Property Name="Projet" />
     </ShowAsAssociation>
-  </Class>
-  <Class Name="ProsceneLite.Data.StatutValidation">
-    <Position X="15" Y="12.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\StatutValidation.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.PartisQuete">
     <Position X="6.5" Y="14.25" Width="1.5" />
@@ -134,24 +126,25 @@
   <Class Name="ProsceneLite.Data.ObjetsQuete">
     <Position X="12.25" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAKAAAACAAAABAAAAQEAAEAggEAgBAAAAEIAQBABAA=</HashCode>
+      <HashCode>AEAKAAAACAAAABAAAAQEAAAAggEAABAAAAEIAQBABAA=</HashCode>
       <FileName>Entities\ObjetsQuete.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Quete" />
       <Property Name="PlotPointsQuete" />
-      <Property Name="StatutValidation" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Spots">
     <Position X="17.75" Y="12.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAACAAAQAAAAABAAAAAAAABBAAAAgAAAQAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAQAAAAABAAAAAAAABBAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Entities\Spots.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TypoSpot" />
-      <Property Name="StatutValidation" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.TypoSpot">
@@ -164,15 +157,16 @@
   <Class Name="ProsceneLite.Data.Inscrits">
     <Position X="19.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAACAQAAAggAAAAAAAgAECAAACAAAAAAACAAQAQAAAA=</HashCode>
+      <HashCode>QAACAYAAAggAAAAAAAgAECAAACAAAAAAACAAUAQAAAA=</HashCode>
       <FileName>Entities\Inscrits.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Adresse" />
+      <Property Name="Projet" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.PJ">
-    <Position X="10.5" Y="3.5" Width="1.5" />
+    <Position X="10.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAEAAAAIAgAIAAAIAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\PJ.cs</FileName>

@@ -27,6 +27,7 @@ namespace ProsceneLite.Data
         public bool EstPJ { get; set; } 
         public bool EstPNJ { get; set; }
         public bool EstOrga { get; set; }
+        public Guid? ProjetId { get; set; }
 
         #endregion
 
@@ -34,8 +35,11 @@ namespace ProsceneLite.Data
         [ForeignKey(nameof(AdresseId))]
         public virtual Adresse Adresse
         { get; set; }
+        [ForeignKey(nameof(ProjetId))]
+        public virtual Projet Projet
+        { get; set; }
+
         #endregion
 
-        
     }
 }

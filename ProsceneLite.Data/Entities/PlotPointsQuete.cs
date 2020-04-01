@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ProsceneLite.Data
 {
-    [Table("Class1")]
+    [Table("PlotPointsQuete")]
     public class PlotPointsQuete
     {
         #region Key(s)
@@ -35,7 +35,7 @@ namespace ProsceneLite.Data
         /// <summary>
         /// //indique à quelle quête CE PP appartient
         /// </summary>
-        public Guid QueteId { get; set; }
+        public Guid? QueteId { get; set; }
         /// <summary>
         /// indique l'Id du PP Parent (dans la Quete ou hors Quete)
         /// </summary>

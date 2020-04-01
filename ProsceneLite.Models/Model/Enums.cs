@@ -17,4 +17,6 @@ namespace ProsceneLite.Models
     public enum StatuDemContact { envoyee, approuvee, blacklist}
 
     public enum StatuContact { connecte, occupe, nepasdéranger, deretourbientot, absent, deconnecte}
+
+    public enum StatuValid { redact, relecture, validation, validé}
 }
