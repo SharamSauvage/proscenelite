@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "r0EMwFEC6sL/YiVcUG9vgWnv/kf0O7kw9L845N9xwugCoG2yPSRpxJ72mS0e1D0uoarkV1xytyDlUPBdK5f5QA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\A273168\\source\\repos\\ProsceneLite\\ProsceneLite.Models\\ProsceneLite.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\A273168\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\A273168\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
