@@ -25,7 +25,7 @@ namespace ProsceneLite.Data
         public Guid? JoueurID { get; set; }
 
         [InverseProperty(nameof(PartisPJ.PJ))]
-        public virtual ICollection<PJ> LPJPartis { get; set; }
+        public virtual ICollection<PartisPJ> LPJPartis { get; set; }
 
         #endregion
 

@@ -21,7 +21,7 @@ namespace ProsceneLite.Data
         public Byte[] Img { get; set; }
 
         [InverseProperty(nameof(Scene.Spots))]
-        public virtual ICollection<Spots> LSpotScene { get; set; }
+        public virtual ICollection<Scene> LSpotScene { get; set; }
 
         #endregion
 

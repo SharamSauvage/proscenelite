@@ -34,11 +34,11 @@ namespace ProsceneLite.Data
         public Guid? TerrainId { get; set; }
 
         [InverseProperty(nameof(Inscrits.Projet))]
-        public virtual ICollection<Projet> LProjetsInscrits { get; set; }
+        public virtual ICollection<Inscrits> LProjetsInscrits { get; set; }
         [InverseProperty(nameof(ProjetsUtilisateurs.Projet))]
-        public virtual ICollection<Projet> LProjetUtilisateurs { get; set; }
+        public virtual ICollection<ProjetsUtilisateurs> LProjetUtilisateurs { get; set; }
         [InverseProperty(nameof(Quete.Projet))]
-        public virtual ICollection<Projet> LProjetQuetes { get; set; }
+        public virtual ICollection<Quete> LProjetQuetes { get; set; }
         #endregion
 
         #region ForeignKeys

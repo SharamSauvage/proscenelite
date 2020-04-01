@@ -42,7 +42,6 @@ namespace ProsceneLite.Data
         public virtual DbSet<Scene> _Scenes { get; set; }
         public virtual DbSet<Spots> _Spots { get; set; }
         //public virtual DbSet<StatResa> _StatResas { get; set; }
-        public virtual DbSet<StatutValidation> _StatutValidations { get; set; }
         //public virtual DbSet<StockEntrepot> _StockEntrepots { get; set; }
         //public virtual DbSet<Terrains> _Terrains { get; set; }
         public virtual DbSet<TypoQuete> _TypoQuetes { get; set; }
@@ -81,7 +80,7 @@ namespace ProsceneLite.Data
 
             modelBuilder.Entity<Univers>()
                 .HasOne(t => t.TyposUnivers)
-                .WithMany(u => u.UniversLiés)
+                .WithMany(u => u.LUnivers)
                 .OnDelete(DeleteBehavior.SetNull);
 
             /*modelBuilder.Entity<ListeChampsUnivers>()
@@ -91,10 +90,14 @@ namespace ProsceneLite.Data
             */
             modelBuilder.Entity<Projet>()
                 .HasOne(u => u.Univers)
-                .WithMany(p => p.ListeProjets)
+                .WithMany(p => p.LProjets)
                 .OnDelete(DeleteBehavior.SetNull);
 
-            
+
+
+
+
+
         }
     }
 }

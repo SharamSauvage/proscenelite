@@ -28,13 +28,13 @@ namespace ProsceneLite.Data
         public Byte[] Avatar { get; set; }
 
         [InverseProperty(nameof(AdressesUtilisateurs.Utilisateurs))]
-        public virtual ICollection<Utilisateurs> LUtilisateursAdresses { get; set; }
+        public virtual ICollection<AdressesUtilisateurs> LUtilisateursAdresses { get; set; }
         [InverseProperty(nameof(Social.Utilisateurs))]
-        public virtual ICollection<Utilisateurs> LUtilisateurUsersSoc { get; set; }
+        public virtual ICollection<Social> LUtilisateurUsersSoc { get; set; }
         [InverseProperty(nameof(Social.Contact))]
-        public virtual ICollection<Utilisateurs> LUtilisateursContactSoc { get; set; }
+        public virtual ICollection<Social> LUtilisateursContactSoc { get; set; }
         [InverseProperty(nameof(ProjetsUtilisateurs.Utilisateurs))]
-        public virtual ICollection<Utilisateurs> LUtilisateursProjets { get; set; }
+        public virtual ICollection<ProjetsUtilisateurs> LUtilisateursProjets { get; set; }
         [InverseProperty(nameof(Quete.Utilisateurs))]
         public virtual ICollection<Quete> LUtilisateursQuete { get; set; }
         #endregion

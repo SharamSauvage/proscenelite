@@ -19,7 +19,7 @@ namespace ProsceneLite.Data
         public string TypeSpot { get; set; } //décor, zone instanciée, escape room
         
         [InverseProperty(nameof(Spots.TypoSpot))]
-        public virtual ICollection<TypoSpot> LSpots { get; set; }
+        public virtual ICollection<Spots> LSpots { get; set; }
 
         #endregion
 

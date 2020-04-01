@@ -30,7 +30,7 @@ namespace ProsceneLite.Data
         public Guid? ProjetId { get; set; }
 
         [InverseProperty(nameof(PJ.Inscrits))]
-        public virtual ICollection<Inscrits> LInscrits { get; set; }
+        public virtual ICollection<PJ> LInscrits { get; set; }
 
         #endregion
 

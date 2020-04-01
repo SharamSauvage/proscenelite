@@ -21,7 +21,7 @@ namespace ProsceneLite.Data
         public string DescrptAttitude { get; set; }
 
         [InverseProperty(nameof(PNJScene.PNJ))]
-        public virtual ICollection<PNJ> LScene { get; set; }
+        public virtual ICollection<PNJScene> LScene { get; set; }
         #endregion
 
         #region ForeignKeys

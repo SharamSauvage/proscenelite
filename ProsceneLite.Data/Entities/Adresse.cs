@@ -26,9 +26,9 @@ namespace ProsceneLite.Data
         public Guid? Pays { get; set; }
 
         [InverseProperty(nameof(Inscrits.Adresse))]
-        public virtual ICollection<Adresse> LAdresseInscrits { get; set; }
+        public virtual ICollection<Inscrits> LAdresseInscrits { get; set; }
         [InverseProperty(nameof(AdressesUtilisateurs.Adresse))]
-        public virtual ICollection<Adresse> LAdresseUsers { get; set; }
+        public virtual ICollection<AdressesUtilisateurs> LAdresseUsers { get; set; }
         #endregion
 
         #region ForeignKeys

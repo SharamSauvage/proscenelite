@@ -23,7 +23,7 @@ namespace ProsceneLite.Data
         public string TypeQuete { get; set; } 
 
         [InverseProperty(nameof(Quete.TypoQuete))]
-        public virtual ICollection<TypoQuete> LQuete { get; set; }
+        public virtual ICollection<Quete> LQuete { get; set; }
 
     }
 }

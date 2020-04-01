@@ -17,6 +17,6 @@ namespace ProsceneLite.Data
 
 
         [InverseProperty(nameof(Adresse.Pays1))]
-        public ICollection<Voies> LPays { get; set; }
+        public ICollection<Adresse> LPays { get; set; }
     }
 }

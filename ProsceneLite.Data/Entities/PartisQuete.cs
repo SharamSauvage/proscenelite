@@ -23,9 +23,9 @@ namespace ProsceneLite.Data
         public DateTime FinEnJeu { get; set; }
 
         [InverseProperty(nameof(PlotPointsQuete.PartisQuete))]
-        public virtual ICollection<PartisQuete> LPlotPointPartis { get; set; }
+        public virtual ICollection<PlotPointsQuete> LPlotPointPartis { get; set; }
         [InverseProperty(nameof(PartisPJ.PartisQuete))]
-        public virtual ICollection<PartisQuete> LPartisPJ { get; set; }
+        public virtual ICollection<PartisPJ> LPartisPJ { get; set; }
 
         #endregion
 

@@ -52,7 +52,7 @@ namespace ProsceneLite.Data
         [InverseProperty(nameof(PlotPointsQuete.PlotPointsQuete1))]
         public virtual ICollection<PlotPointsQuete> LPPEnfants { get; set; }
         [InverseProperty(nameof(ObjetsQuete.PlotPointsQuete))]
-        public virtual ICollection<PlotPointsQuete> LObjets { get; set; }
+        public virtual ICollection<ObjetsQuete> LObjets { get; set; }
 
         #endregion
 

@@ -23,9 +23,9 @@ namespace ProsceneLite.Data
         public string DescriptionScene { get; set; }
 
         [InverseProperty(nameof(ObjetScene.Scene))]
-        public virtual ICollection<Scene> LObjetsScn { get; set; }
+        public virtual ICollection<ObjetScene> LObjetsScn { get; set; }
         [InverseProperty(nameof(PNJScene.Scene))]
-        public virtual ICollection<Scene> LPNJScn { get; set; }
+        public virtual ICollection<PNJScene> LPNJScn { get; set; }
 
         #endregion
 

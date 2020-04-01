@@ -30,7 +30,7 @@ namespace ProsceneLite.Data
         public bool? DemandeResaOK { get; set; }
 
         [InverseProperty(nameof(ObjetScene.ObjetsQuete))]
-        public virtual ICollection<ObjetsQuete> LObjQueteScn { get; set; }
+        public virtual ICollection<ObjetScene> LObjQueteScn { get; set; }
         #endregion
 
         #region ForeignKeys

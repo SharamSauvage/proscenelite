@@ -16,6 +16,6 @@ namespace ProsceneLite.Data
         public int NomVoie { get; set; }
 
         [InverseProperty(nameof(Adresse.Voies))]
-        public ICollection<Voies> ListeVoies { get; set; }
+        public ICollection<Adresse> ListeVoies { get; set; }
     }
 }
