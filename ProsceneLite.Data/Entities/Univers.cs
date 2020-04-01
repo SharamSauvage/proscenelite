@@ -19,10 +19,9 @@ namespace ProsceneLite.Data
         public string NomUnivers { get; set; }
         public Guid? TypoUniversId { get; set; }
 
-        [InverseProperty(nameof(ListeChampsUnivers.Univers))]
-        public virtual ICollection<ListeChampsUnivers> ListeChamps { get; set; }
+        
         [InverseProperty(nameof(Projet.Univers))]
-        public virtual ICollection<Projet> ListeProjets { get; set; }
+        public virtual ICollection<Projet> LProjets { get; set; }
         #endregion
 
         #region ForeignKeys

@@ -22,7 +22,10 @@ namespace ProsceneLite.Data
 
         //il faut une table pour les Objets de jeu, et une pour les Docs de Jeu ET une dernière pour le BG
 
-        public Guid JoueurID { get; set; }
+        public Guid? JoueurID { get; set; }
+
+        [InverseProperty(nameof(PartisPJ.PJ))]
+        public virtual ICollection<PJ> LPJPartis { get; set; }
 
         #endregion
 

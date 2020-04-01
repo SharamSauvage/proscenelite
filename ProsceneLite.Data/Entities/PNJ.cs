@@ -19,6 +19,9 @@ namespace ProsceneLite.Data
         public string DescrptPNJ { get; set; }
         public string DescrptCostume { get; set; }
         public string DescrptAttitude { get; set; }
+
+        [InverseProperty(nameof(PNJScene.PNJ))]
+        public virtual ICollection<PNJ> LScene { get; set; }
         #endregion
 
         #region ForeignKeys

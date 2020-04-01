@@ -21,6 +21,17 @@ namespace ProsceneLite.Data
         public int? StatuValidId { get; set; }
         public Guid? TypoQueteId { get; set; }
         public Guid? ProjetId { get; set; }
+
+        [InverseProperty(nameof(PlotPointsQuete.Quete))]
+        public virtual ICollection<Quete> LPlotPoint { get; set; }
+        [InverseProperty(nameof(PlotPointsQuete.Quete1))]
+        public virtual ICollection<Quete> LPPParent { get; set; }
+        [InverseProperty(nameof(Scene.Quete))]
+        public virtual ICollection<Quete> LScene { get; set; }
+        [InverseProperty(nameof(PartisQuete.Quete))]
+        public virtual ICollection<Quete> LPartis { get; set; }
+        [InverseProperty(nameof(ObjetsQuete.Quete))]
+        public virtual ICollection<Quete> LObjets { get; set; }
         #endregion
 
         #region ForeignKeys

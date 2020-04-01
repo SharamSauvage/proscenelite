@@ -21,6 +21,12 @@ namespace ProsceneLite.Data
         public Guid SpotId { get; set; }
 
         public string DescriptionScene { get; set; }
+
+        [InverseProperty(nameof(ObjetScene.Scene))]
+        public virtual ICollection<Scene> LObjetsScn { get; set; }
+        [InverseProperty(nameof(PNJScene.Scene))]
+        public virtual ICollection<Scene> LPNJScn { get; set; }
+
         #endregion
 
         #region ForeignKeys

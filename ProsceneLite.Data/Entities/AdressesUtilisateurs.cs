@@ -19,16 +19,10 @@ namespace ProsceneLite.Data
         #region ForeignKeys
         [ForeignKey(nameof(AdresseId))]
         public virtual Adresse Adresse
-        {
-            get;
-            set;
-        }
+        { get; set; }
         [ForeignKey(nameof(UtilisateurId))]
         public virtual Utilisateurs Utilisateurs
-        {
-            get;
-            set;
-        }
+        { get; set; }
         #endregion
     }
 }

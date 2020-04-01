@@ -14,5 +14,8 @@ namespace ProsceneLite.Data
         public Guid Id { get; set; }
         [Required]
         public int NomVoie { get; set; }
+
+        [InverseProperty(nameof(Adresse.Voies))]
+        public ICollection<Voies> ListeVoies { get; set; }
     }
 }

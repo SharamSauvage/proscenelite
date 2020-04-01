@@ -32,6 +32,13 @@ namespace ProsceneLite.Data
         public bool NbCouchages { get; set; }
         public int? TypoInscriptions { get; set; } //Enum
         public Guid? TerrainId { get; set; }
+
+        [InverseProperty(nameof(Inscrits.Projet))]
+        public virtual ICollection<Projet> LProjetsInscrits { get; set; }
+        [InverseProperty(nameof(ProjetsUtilisateurs.Projet))]
+        public virtual ICollection<Projet> LProjetUtilisateurs { get; set; }
+        [InverseProperty(nameof(Quete.Projet))]
+        public virtual ICollection<Projet> LProjetQuetes { get; set; }
         #endregion
 
         #region ForeignKeys

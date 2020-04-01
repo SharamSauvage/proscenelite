@@ -29,6 +29,9 @@ namespace ProsceneLite.Data
         public bool EstOrga { get; set; }
         public Guid? ProjetId { get; set; }
 
+        [InverseProperty(nameof(PJ.Inscrits))]
+        public virtual ICollection<Inscrits> LInscrits { get; set; }
+
         #endregion
 
         #region ForeignKeys

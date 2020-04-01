@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 namespace ProsceneLite.Data
 {
-    [Table("Spot")]
+    [Table("Spots")]
     public class Spots
     {
 
@@ -19,6 +19,9 @@ namespace ProsceneLite.Data
         public Guid? TypeSpotId { get; set; } //zone instanciée, décor en jeu, escape room etc...
         public int? StatuValidId { get; set; }
         public Byte[] Img { get; set; }
+
+        [InverseProperty(nameof(Scene.Spots))]
+        public virtual ICollection<Spots> LSpotScene { get; set; }
 
         #endregion
 

@@ -21,6 +21,12 @@ namespace ProsceneLite.Data
         public string But { get; set; }
         public DateTime DebutEnJeu { get; set; }
         public DateTime FinEnJeu { get; set; }
+
+        [InverseProperty(nameof(PlotPointsQuete.PartisQuete))]
+        public virtual ICollection<PartisQuete> LPlotPointPartis { get; set; }
+        [InverseProperty(nameof(PartisPJ.PartisQuete))]
+        public virtual ICollection<PartisQuete> LPartisPJ { get; set; }
+
         #endregion
 
         #region ForeignKeys

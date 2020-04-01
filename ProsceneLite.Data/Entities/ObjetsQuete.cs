@@ -28,6 +28,9 @@ namespace ProsceneLite.Data
         public bool? EstDisponible { get; set; }
         public bool? EstDemande { get; set; }
         public bool? DemandeResaOK { get; set; }
+
+        [InverseProperty(nameof(ObjetScene.ObjetsQuete))]
+        public virtual ICollection<ObjetsQuete> LObjQueteScn { get; set; }
         #endregion
 
         #region ForeignKeys

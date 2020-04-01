@@ -48,6 +48,12 @@ namespace ProsceneLite.Data
         /// si le PP est lié à un seul parti (Pro ou Anti) de la quete permet d'indiquer lequel
         /// </summary>
         public Guid? PartiId { get; set; }
+
+        [InverseProperty(nameof(PlotPointsQuete.PlotPointsQuete1))]
+        public virtual ICollection<PlotPointsQuete> LPPEnfants { get; set; }
+        [InverseProperty(nameof(ObjetsQuete.PlotPointsQuete))]
+        public virtual ICollection<PlotPointsQuete> LObjets { get; set; }
+
         #endregion
 
         #region ForeignKeys

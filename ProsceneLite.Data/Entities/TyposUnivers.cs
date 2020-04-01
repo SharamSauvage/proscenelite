@@ -18,7 +18,7 @@ namespace ProsceneLite.Data
         public string TypeUnivers { get; set; }//médiéval-fantastique ; féérique; low-fantasy; steampunk; cyberpunk; postapo
         
         [InverseProperty(nameof(Univers.TyposUnivers))]
-        public virtual ICollection<Univers> UniversLiés { get; set; }
+        public virtual ICollection<Univers> LUnivers { get; set; }
         #endregion
 
 
