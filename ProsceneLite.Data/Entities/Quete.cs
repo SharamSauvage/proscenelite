@@ -22,6 +22,8 @@ namespace ProsceneLite.Data
         public Guid? TypoQueteId { get; set; }
         public Guid? ProjetId { get; set; }
 
+        public string SynopsisQuete { get; set; }
+
         [InverseProperty(nameof(PlotPointsQuete.Quete))]
         public virtual ICollection<PlotPointsQuete> LPlotPoint { get; set; }
         [InverseProperty(nameof(PlotPointsQuete.Quete1))]

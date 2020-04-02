@@ -17,7 +17,7 @@ namespace ProsceneLite.Data
         #region Champs
         public string Nom { get; set; }
         public Guid? UniversId { get; set; }
-        public int? TypoStockageId { get; set; }
+        public int? TypoStockageId { get; set; } //Enum  : centralisé ou mixte il faut stocker l'adresse et user/mdp
         public DateTime DateDébutJeu { get; set; }
         public DateTime DateFinJeu { get; set; }
         public DateTime DateDebutInstal { get; set; }
@@ -29,7 +29,8 @@ namespace ProsceneLite.Data
         public double PrxPNJ { get; set; }
         public double PrxOrga { get; set; }
         public bool RepasInclus { get; set; }
-        public bool NbCouchages { get; set; }
+        public bool CouchagesInclus { get; set; }
+        public int NbCouchages { get; set; }
         public int? TypoInscriptions { get; set; } //Enum
         public Guid? TerrainId { get; set; }
 

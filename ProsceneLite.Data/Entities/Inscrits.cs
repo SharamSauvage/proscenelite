@@ -19,7 +19,7 @@ namespace ProsceneLite.Data
         public string Prenom { get; set; }
         public string CptFacebook { get; set; }
         public string AdEmail { get; set; }
-        public Guid AdresseId { get; set; }
+        public Guid? AdresseId { get; set; }
         public DateTime DdN { get; set; }
         // relatif à l'inscription "Administrative"
         public bool ReglementOK { get; set; }

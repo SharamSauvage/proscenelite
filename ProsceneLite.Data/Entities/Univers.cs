@@ -22,6 +22,9 @@ namespace ProsceneLite.Data
         
         [InverseProperty(nameof(Projet.Univers))]
         public virtual ICollection<Projet> LProjets { get; set; }
+        [InverseProperty(nameof(Archetype.Univers))]
+        public virtual ICollection<Archetype> LArchetypes { get; set; }
+
         #endregion
 
         #region ForeignKeys

@@ -3,7 +3,7 @@
   <Class Name="ProsceneLite.Data.Projet">
     <Position X="9.5" Y="8.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>CABCAAAAEAAAAAAAEAAABBAAQDAACIAAEAmAAIAAAEg=</HashCode>
+      <HashCode>CABCAAAAEAEAACAAEAAABBAASDAACIAAEAmAAIAAAEg=</HashCode>
       <FileName>Entities\Projet.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -13,7 +13,7 @@
   <Class Name="ProsceneLite.Data.Adresse">
     <Position X="21" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IKACAAQAgAQAgAAAAAAAAAAAEAAAAAAAAAAAAAABAAA=</HashCode>
+      <HashCode>IKACAAQAgCQAgAAAAAAAAAAAEAAAAAAAACAAAAABAAA=</HashCode>
       <FileName>Entities\Adresse.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -24,21 +24,21 @@
   <Class Name="ProsceneLite.Data.Pays">
     <Position X="18.5" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <HashCode>AAACAABAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Entities\Pays.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.Voies">
     <Position X="18.5" Y="12" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAgAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Voies.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.Utilisateurs">
     <Position X="13.5" Y="12" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAACAAAAACAAAAAAAAQAAAAAACAAAAAAASAAAAAAAAA=</HashCode>
+      <HashCode>QAACgAAAACAAAAAAAAQAAACAACAAAAIAASAAAAgIAAA=</HashCode>
       <FileName>Entities\Utilisateurs.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -67,14 +67,14 @@
   <Class Name="ProsceneLite.Data.TyposUnivers">
     <Position X="3.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAgCAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAg=</HashCode>
       <FileName>Entities\TyposUnivers.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.Univers">
     <Position X="6.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAABABEAACAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAABAAAABAAACAAAAIAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Univers.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -84,14 +84,14 @@
   <Class Name="ProsceneLite.Data.TypoQuete">
     <Position X="12.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>Entities\TypoQuete.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.Quete">
     <Position X="9.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAECIIAAAEAAAFAAAIAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AAECIIAAAEAAAFBAAIAAAAAACAAQAAAAAAAAGAQAAAA=</HashCode>
       <FileName>Entities\Quete.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -103,7 +103,7 @@
   <Class Name="ProsceneLite.Data.PartisQuete">
     <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAICAAAACAAABAAAAAAAAAAIgAgAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>gAICAAABCAAABAAACAAAAAAIgAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\PartisQuete.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -113,7 +113,7 @@
   <Class Name="ProsceneLite.Data.PlotPointsQuete">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAgAQCAAAADAAIAAAAAAAgABAgAAABQACRAAAAAA=</HashCode>
+      <HashCode>AAACAoAQCAAAADAAIAAAAAAAgABAgAAABQACTAAAAAA=</HashCode>
       <FileName>Entities\PlotPointsQuete.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -126,7 +126,7 @@
   <Class Name="ProsceneLite.Data.ObjetsQuete">
     <Position X="6.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAKAAAACAAAABAAAAQEAAAAggEAABAAAAEIAQBABAA=</HashCode>
+      <HashCode>AEAKAAAACAAAABAAAAQEAAAAggEAgBAAAAEIAQBABAA=</HashCode>
       <FileName>Entities\ObjetsQuete.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -137,7 +137,7 @@
   <Class Name="ProsceneLite.Data.Spots">
     <Position X="3.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAQAAAAABAAAAAAAABBAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAQAAAAABAAAAAAAABBAAAAAAAAQAAAIAAAAAA=</HashCode>
       <FileName>Entities\Spots.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -147,7 +147,7 @@
   <Class Name="ProsceneLite.Data.TypoSpot">
     <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Entities\TypoSpot.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -165,24 +165,25 @@
   <Class Name="ProsceneLite.Data.PJ">
     <Position X="19" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAEAAAAIAgAIAAAIAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAEAAAAIAgAIAAQIAAAAAEAAAAAAAAAAAAQ=</HashCode>
       <FileName>Entities\PJ.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Inscrits" />
+      <Property Name="Archetype" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.PNJ">
     <Position X="0.5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <HashCode>AAACAAAAAAQAAAAAAAAAAAABAAAQAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Entities\PNJ.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.Scene">
     <Position X="6.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAEACAAQABAAAEAAAAAAgAAAgAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAiAAEASAAQABAAAEAAAAAAgAAAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Scene.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -232,6 +233,16 @@
     <ShowAsAssociation>
       <Property Name="Utilisateurs" />
       <Property Name="Contact" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProsceneLite.Data.Archetype">
+    <Position X="13.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAABAAAAAAAAAEAAAAAABg=</HashCode>
+      <FileName>Entities\Archetype.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Univers" />
     </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />

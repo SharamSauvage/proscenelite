@@ -17,16 +17,20 @@ namespace ProsceneLite.Models
 
         public string DescriptionScene { get; set; }
 
-        public virtual Quete Quete
-        { get; set; }
-
-        public virtual Spots Spots
-        { get; set; }
         #endregion
 
 
         #region Constructeur
         public Scene() { }
+        public Scene(Guid pId, DateTime pDeb, DateTime pFin, Guid pQuete, Guid pSpot, string pDescpt)
+        {
+            Id = pId;
+            DateDebut = pDeb;
+            DateFin = pFin;
+            QueteId = pQuete;
+            SpotId = pSpot;
+            DescriptionScene = pDescpt;
+        }
         #endregion
 
         #region Methodes

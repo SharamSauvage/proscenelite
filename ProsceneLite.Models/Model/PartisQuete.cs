@@ -10,7 +10,7 @@ namespace ProsceneLite.Models
 
         public Guid Id { get; set; }
 
-        public Guid QueteId { get; set; }
+        public Guid? QueteId { get; set; }
         public string NomParti { get; set; }
         public string Synopsis { get; set; }
         public string But { get; set; }

@@ -10,17 +10,7 @@ namespace ProsceneLite.Models
         public Guid UtilisateurId { get; set; }
         public Guid AdresseId { get; set; }
 
-        public virtual Adresse Adresse
-        {
-            get;
-            set;
-        }
-
-        public virtual Utilisateurs Utilisateurs
-        {
-            get;
-            set;
-        }
+        
         #endregion
 
         #region Constructeur

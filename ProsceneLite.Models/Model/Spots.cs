@@ -12,19 +12,31 @@ namespace ProsceneLite.Models
         public Guid Id { get; set; }
         public string NomSpot { get; set; }
         public Guid? TypeSpot { get; set; } //zone instanciée, décor en jeu, escape room etc...
-        public Guid? StatuValidId { get; set; }
+        public StatuValid StatuValidId { get; set; }
         public Byte[] Img { get; set; }
 
-        public virtual TypoSpot TypoSpot
-        { get; set; }
-
-        public virtual StatutValidation StatutValidation
-        { get; set; }
+        
         #endregion
 
 
         #region Constructeur
         public Spots() { }
+        public Spots(Guid pId, string pNom, Guid pTypeSpot, int pStatValid, Byte[] pImg)
+        {
+            Id = pId;
+            NomSpot = pNom;
+            TypeSpot = pTypeSpot;
+            Img = pImg;
+            StatuValidId=pStatValid switch
+            {
+                0 => StatuValid.redact,
+                1 => StatuValid.relecture,
+                2 => StatuValid.validation,
+                3 => StatuValid.validé,
+                _ => StatuValid.redact,
+            };
+
+        }
         #endregion
 
         #region Methodes

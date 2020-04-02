@@ -98,159 +98,168 @@ namespace ProsceneLite.Data
                 .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<Adresse>()
-            .HasOne(u => u.Pays1)
-            .WithMany(p => p.LPays)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Pays1)
+                .WithMany(p => p.LPays)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<AdressesUtilisateurs>()
-            .HasOne(u => u.Adresse)
-            .WithMany(p => p.LAdresseUsers)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.Adresse)
+                .WithMany(p => p.LAdresseUsers)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<AdressesUtilisateurs>()
-            .HasOne(u => u.Utilisateurs)
-            .WithMany(p => p.LUtilisateursAdresses)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.Utilisateurs)
+                .WithMany(p => p.LUtilisateursAdresses)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<Social>()
-            .HasOne(u => u.Utilisateurs)
-            .WithMany(p => p.LUtilisateurUsersSoc)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.Utilisateurs)
+                .WithMany(p => p.LUtilisateurUsersSoc)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<Social>()
-            .HasOne(u => u.Contact)
-            .WithMany(p => p.LUtilisateursContactSoc)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.Contact)
+                .WithMany(p => p.LUtilisateursContactSoc)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<PJ>()
-            .HasOne(u => u.Inscrits)
-            .WithMany(p => p.LInscrits)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Inscrits)
+                .WithMany(p => p.LInscrits)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<Inscrits>()
-            .HasOne(u => u.Projet)
-            .WithMany(p => p.LProjetsInscrits)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Projet)
+                .WithMany(p => p.LProjetsInscrits)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<Inscrits>()
-            .HasOne(u => u.Adresse)
-            .WithMany(p => p.LAdresseInscrits)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Adresse)
+                .WithMany(p => p.LAdresseInscrits)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<ProjetsUtilisateurs>()
-            .HasOne(u => u.Utilisateurs)
-            .WithMany(p => p.LUtilisateursProjets)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.Utilisateurs)
+                .WithMany(p => p.LUtilisateursProjets)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<ProjetsUtilisateurs>()
-            .HasOne(u => u.Projet)
-            .WithMany(p => p.LProjetUtilisateurs)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.Projet)
+                .WithMany(p => p.LProjetUtilisateurs)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<Univers>()
-            .HasOne(u => u.TyposUnivers)
-            .WithMany(p => p.LUnivers)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.TyposUnivers)
+                .WithMany(p => p.LUnivers)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<Projet>()
-            .HasOne(u => u.Univers)
-            .WithMany(p => p.LProjets)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Univers)
+                .WithMany(p => p.LProjets)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<Quete>()
-            .HasOne(u => u.Projet)
-            .WithMany(p => p.LProjetQuetes)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Projet)
+                .WithMany(p => p.LProjetQuetes)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<Quete>()
-            .HasOne(u => u.TypoQuete)
-            .WithMany(p => p.LQuete)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.TypoQuete)
+                .WithMany(p => p.LQuete)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<Quete>()
-            .HasOne(u => u.Utilisateurs)
-            .WithMany(p => p.LUtilisateursQuete)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Utilisateurs)
+                .WithMany(p => p.LUtilisateursQuete)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<PlotPointsQuete>()
-            .HasOne(u => u.Quete)
-            .WithMany(p => p.LPlotPoint)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Quete)
+                .WithMany(p => p.LPlotPoint)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<PlotPointsQuete>()
-            .HasOne(u => u.Quete1)
-            .WithMany(p => p.LPPParent)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Quete1)
+                .WithMany(p => p.LPPParent)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<Scene>()
-            .HasOne(u => u.Quete)
-            .WithMany(p => p.LScene)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Quete)
+                .WithMany(p => p.LScene)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<PartisQuete>()
-            .HasOne(u => u.Quete)
-            .WithMany(p => p.LPartis)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Quete)
+                .WithMany(p => p.LPartis)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<ObjetsQuete>()
-            .HasOne(u => u.Quete)
-            .WithMany(p => p.LObjets)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Quete)
+                .WithMany(p => p.LObjets)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<PlotPointsQuete>()
-            .HasOne(u => u.PartisQuete)
-            .WithMany(p => p.LPlotPointPartis)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.PartisQuete)
+                .WithMany(p => p.LPlotPointPartis)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<PartisPJ>()
-            .HasOne(u => u.PartisQuete)
-            .WithMany(p => p.LPartisPJ)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.PartisQuete)
+                .WithMany(p => p.LPartisPJ)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<PartisPJ>()
-            .HasOne(u => u.PJ)
-            .WithMany(p => p.LPJPartis)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.PJ)
+                .WithMany(p => p.LPJPartis)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<PlotPointsQuete>()
-            .HasOne(u => u.PlotPointsQuete1)
-            .WithMany(p => p.LPPEnfants)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.PlotPointsQuete1)
+                .WithMany(p => p.LPPEnfants)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<ObjetsQuete>()
-            .HasOne(u => u.PlotPointsQuete)
-            .WithMany(p => p.LObjets)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.PlotPointsQuete)
+                .WithMany(p => p.LObjets)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<Spots>()
-            .HasOne(u => u.TypoSpot)
-            .WithMany(p => p.LSpots)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.TypoSpot)
+                .WithMany(p => p.LSpots)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<Scene>()
-            .HasOne(u => u.Spots)
-            .WithMany(p => p.LSpotScene)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+                .HasOne(u => u.Spots)
+                .WithMany(p => p.LSpotScene)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             modelBuilder.Entity<ObjetScene>()
-            .HasOne(u => u.Scene)
-            .WithMany(p => p.LObjetsScn)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.Scene)
+                .WithMany(p => p.LObjetsScn)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<PNJScene>()
-            .HasOne(u => u.Scene)
-            .WithMany(p => p.LPNJScn)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.Scene)
+                .WithMany(p => p.LPNJScn)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<PNJScene>()
-            .HasOne(u => u.PNJ)
-            .WithMany(p => p.LScene)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.PNJ)
+                .WithMany(p => p.LScene)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<ObjetScene>()
-            .HasOne(u => u.ObjetsQuete)
-            .WithMany(p => p.LObjQueteScn)
-            .OnDelete(DeleteBehavior.ClientCascade);
+                .HasOne(u => u.ObjetsQuete)
+                .WithMany(p => p.LObjQueteScn)
+                .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<Archetype>()
+                .HasOne(u => u.Univers)
+                .WithMany(p => p.LArchetypes)
+                .OnDelete(DeleteBehavior.ClientCascade);
+            modelBuilder.Entity<PJ>()
+                .HasOne(u => u.Archetype)
+                .WithMany(p => p.LPJ)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
             #endregion
 

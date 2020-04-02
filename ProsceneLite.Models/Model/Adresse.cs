@@ -21,24 +21,10 @@ namespace ProsceneLite.Models
         
         public Guid? Pays { get; set; }
 
-        public virtual Pays Pays1
-        {
-            get;
-            set;
-        }
-
-        public virtual Voies Voies
-        {
-            get;
-            set;
-        }
         #endregion
 
         #region Constructeur
-        public Adresse() 
-        {
-
-        }
+        public Adresse() {}
         #endregion
         #region Methodes
         #endregion

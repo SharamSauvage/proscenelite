@@ -15,12 +15,17 @@ namespace ProsceneLite.Models
         
         public string NomUnivers { get; set; }
         public Guid? TypoUniversId { get; set; }
-        public virtual TyposUnivers TyposUnivers
-        { get; set; }
+        
         #endregion
 
         #region Constructeur
         public Univers() { }
+        public Univers(Guid pId, string pNuniv, Guid pTypoUniv)
+        {
+            Id = pId;
+            NomUnivers = pNuniv;
+            TypoUniversId = pTypoUniv;
+        }
         #endregion
 
         #region Methodes

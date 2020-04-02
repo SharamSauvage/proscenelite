@@ -16,11 +16,7 @@ namespace ProsceneLite.Models
         public string DescriptionRoleScene { get; set; }
         public string Remarques { get; set; }
 
-        public virtual PNJ PNJ
-        { get; set; }
-
-        public virtual Scene Scene
-        { get; set; }
+        
         #endregion
 
         #region Constructeur

@@ -17,7 +17,7 @@ namespace ProsceneLite.Data
         #region Champs
         public string NomSpot { get; set; }
         public Guid? TypeSpotId { get; set; } //zone instanciée, décor en jeu, escape room etc...
-        public int? StatuValidId { get; set; }
+        public int? StatuValidId { get; set; } 
         public Byte[] Img { get; set; }
 
         [InverseProperty(nameof(Scene.Spots))]

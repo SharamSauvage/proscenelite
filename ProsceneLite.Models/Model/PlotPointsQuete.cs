@@ -43,14 +43,6 @@ namespace ProsceneLite.Models
         /// </summary>
         public Guid? PartiId { get; set; }
 
-        public virtual PartisQuete PartisQuete
-        { get; set; }
-        public virtual Quete Quete
-        { get; set; }
-        public virtual Quete Quete1
-        { get; set; }
-        public virtual PlotPointsQuete PlotPointsQuete1
-        { get; set; }
         #endregion
 
         #region Constructeur

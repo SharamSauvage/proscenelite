@@ -8,12 +8,12 @@ namespace ProsceneLite.Models
 {
     public class Projet
     {
-        #region Key(s)
+        #region Champs
         public Guid Id { get; set; }
 
         public string Nom { get; set; }
         public Guid? UniversId { get; set; }
-        public int? TypoStockageId { get; set; }
+        public TypoStockage? TypoStockageId { get; set; } //Enum => centralisé ou mixte il faut stocker l'adresse et user/mdp
         public DateTime DateDébutJeu { get; set; }
         public DateTime DateFinJeu { get; set; }
         public DateTime DateDebutInstal { get; set; }
@@ -25,19 +25,51 @@ namespace ProsceneLite.Models
         public double PrxPNJ { get; set; }
         public double PrxOrga { get; set; }
         public bool RepasInclus { get; set; }
-        public bool NbCouchages { get; set; }
-        public int? TypoInscriptions { get; set; } //Enum
+        public bool CouchagesInclus { get; set; }
+        public int NbCouchages { get; set; }
+        public TypoInscription? TypoInscriptions { get; set; } //Enum
         public Guid? TerrainId { get; set; }
 
-        public virtual Univers Univers
-        { get; set; }
-        
-        public virtual Terrains Terrains
-        { get; set; }
+
         #endregion
 
         #region Constructeur
         public Projet() { }
+        public Projet(Guid pId, string pNom, Guid? pUniv, int? pTypoStck, DateTime pDebJeu, DateTime pFinJeu, DateTime pDebInst, DateTime pFinRang,
+            int pNbPJ, int pNbPNJ, int pNbOrg, double pPxPJ, double pPxPNJ, double pPxOrg, bool pRepas, bool pCouch, int pNbCouch, int?pTypoInscptn, Guid? pTerrainId)
+        {
+            Id = pId;
+            Nom = pNom;
+            UniversId = pUniv;
+            DateDébutJeu = pDebJeu;
+            DateFinJeu = pFinJeu;
+            DateDebutInstal = pDebInst;
+            DateFinRangement = pFinRang;
+            NbPJ = pNbPJ;
+            NbPNJ = pNbPNJ;
+            NbOrgas = pNbOrg;
+            PrxPJ = pPxPJ;
+            PrxPNJ = pPxPNJ;
+            PrxOrga = pPxOrg;
+            RepasInclus = pRepas;
+            CouchagesInclus = pCouch;
+            NbCouchages = pNbCouch;
+            TerrainId = pTerrainId;
+            TypoStockageId = pTypoStck switch
+            {
+                0 => TypoStockage.Distribue,
+                1 => TypoStockage.Centralise,
+                2 => TypoStockage.Mixte,
+                _ => TypoStockage.Distribue,
+            };
+            TypoInscriptions = pTypoInscptn switch
+            {
+                0 => TypoInscription.Invitation,
+                1 => TypoInscription.Publique,
+                2 => TypoInscription.Mixte,
+                _ => TypoInscription.Publique,
+            };
+        }
         #endregion
 
         #region Methodes

@@ -13,11 +13,7 @@ namespace ProsceneLite.Models
         
         public string RoleObjet { get; set; }
 
-        public virtual Scene Scene
-        { get; set; }
         
-        public virtual ObjetsQuete ObjetsQuete
-        { get; set; }
         #endregion
 
         #region Constructeur
