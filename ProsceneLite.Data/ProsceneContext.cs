@@ -14,44 +14,45 @@ namespace ProsceneLite.Data
 #endif
         #region DbSets
         public virtual DbSet<Adresse> _Adresse { get; set; }
-        //public virtual DbSet<AdressesEntites> _AdressesEntites { get; set; }
         public virtual DbSet<AdressesUtilisateurs> _AdressesUtilisateurs { get; set; }
-        //public virtual DbSet<Entite> _Entites { get; set; }
-        //public virtual DbSet<EntiteBanque> _EntiteBanques { get; set; }
-        //public virtual DbSet<Entrepot> _Entrepots { get; set; }
-        //public virtual DbSet<FormulaireInscriptions> _FormulaireInscriptions { get; set; }
-        //public virtual DbSet<InscriptionsInstancesForm> _InscriptionsInstancesForms { get; set; }
+        public virtual DbSet<Alignement> _Alignement { get; set; }
+        public virtual DbSet<Archetype> _Archetype { get; set; }
+        public virtual DbSet<Calendrier> _Calendrier { get; set; }
+        public virtual DbSet<CalendriersMultiples> _CalendriersMultiples { get; set; }
+        public virtual DbSet<Caracteristiques> _Caracteristiques { get; set; }
+        public virtual DbSet<CaracteristiquesPJ> _CaracteristiquesPJ { get; set; }
+        public virtual DbSet<ClasseMetier> _ClasseMetier { get; set; }
+        public virtual DbSet<ClassePJ> _ClassePJ { get; set; }
+        public virtual DbSet<Competences> _Competences { get; set; }
+        public virtual DbSet<CompetencesPJ> _CompetencesPJ { get; set; }
         public virtual DbSet<Inscrits> _Inscrits { get; set; }
-        //public virtual DbSet<InstanceFormulaireInscription> _InstanceFormulaireInscriptions { get; set; }
-        //public virtual DbSet<ListeChampsInscriptions> _ListeChampsInscriptions { get; set; }
-        //public virtual DbSet<ListeChampsUnivers> _ListeChampsUnivers { get; set; }
-        public virtual DbSet<ObjetScene> _ObjetScenes { get; set; }
-        public virtual DbSet<ObjetsQuete> _ObjetsQuetes { get; set; }
-        public virtual DbSet<PartisPJ> _PartisPJs { get; set; }
-        public virtual DbSet<PartisQuete> _PartisQuetes { get; set; }
+        public virtual DbSet<Mois> _Mois { get; set; }
+        public virtual DbSet<ObjetScene> _ObjetScene { get; set; }
+        public virtual DbSet<ObjetsQuete> _ObjetsQuete { get; set; }
+        public virtual DbSet<Organisations> _Organisations { get; set; }
+        public virtual DbSet<PartisPJ> _PartisPJ { get; set; }
+        public virtual DbSet<PartisQuete> _PartisQuete { get; set; }
         public virtual DbSet<Pays> _Pays { get; set; }
+        public virtual DbSet<PaysContree> _PaysContree { get; set; }
         public virtual DbSet<PJ> _PJ { get; set; }
-        public virtual DbSet<PlotPointsQuete> _PlotPointsQuetes { get; set; }
+        public virtual DbSet<PlotPointsQuete> _PlotPointsQuete { get; set; }
         public virtual DbSet<PNJ> _PNJ { get; set; }
-        public virtual DbSet<PNJScene> _PNJScenes { get; set; }
-        public virtual DbSet<Projet> _Projets { get; set; }
-        //public virtual DbSet<ProjetsEntites> _ProjetsEntites { get; set; }
+        public virtual DbSet<PNJScene> _PNJScene { get; set; }
+        public virtual DbSet<Projet> _Projet { get; set; }
         public virtual DbSet<ProjetsUtilisateurs> _ProjetsUtilisateurs { get; set; }
-        public virtual DbSet<Quete> _Quetes { get; set; }
-        //public virtual DbSet<ReservationItem> _ReservationItems { get; set; }
-        public virtual DbSet<Scene> _Scenes { get; set; }
+        public virtual DbSet<Quete> _Quete { get; set; }
+        public virtual DbSet<Race> _Race { get; set; }
+        public virtual DbSet<Religion> _Religion { get; set; }
+        public virtual DbSet<Scene> _Scene { get; set; }
+        public virtual DbSet<Social> _Social { get; set; }
         public virtual DbSet<Spots> _Spots { get; set; }
-        //public virtual DbSet<StatResa> _StatResas { get; set; }
-        //public virtual DbSet<StockEntrepot> _StockEntrepots { get; set; }
-        //public virtual DbSet<Terrains> _Terrains { get; set; }
-        public virtual DbSet<TypoQuete> _TypoQuetes { get; set; }
+        public virtual DbSet<TypoQuete> _TypoQuete { get; set; }
         public virtual DbSet<TypoSpot> _TypoSpot { get; set; }
-        public virtual DbSet<TyposUnivers> _TypoUnivers { get; set; }
+        public virtual DbSet<TyposUnivers> _TyposUnivers { get; set; }
         public virtual DbSet<Univers> _Univers { get; set; }
         public virtual DbSet<Utilisateurs> _Utilisateurs { get; set; }
-        //public virtual DbSet<UtilisateursEntites> _UtilisateursEntites { get; set; }
         public virtual DbSet<Voies> _Voies { get; set; }
-        public virtual DbSet<Social> _Socials { get; set; }
+
 
         #endregion
 
@@ -77,19 +78,6 @@ namespace ProsceneLite.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            /*
-             OLD
-            modelBuilder.Entity<Univers>()
-                .HasOne(t => t.TyposUnivers)
-                .WithMany(u => u.LUnivers)
-                .OnDelete(DeleteBehavior.SetNull);
-
-            modelBuilder.Entity<Projet>()
-                .HasOne(u => u.Univers)
-                .WithMany(p => p.LProjets)
-                .OnDelete(DeleteBehavior.SetNull);
-            */
             
             #region GenereViaXL
             modelBuilder.Entity<Adresse>()
@@ -262,7 +250,133 @@ namespace ProsceneLite.Data
                 .OnDelete(DeleteBehavior.ClientSetNull);
 
             #endregion
+            #region GenereviaXL2
+            modelBuilder.Entity<Caracteristiques>()
+                .HasOne(u => u.Univers)
+                .WithMany(p => p.LCarac)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
+            modelBuilder.Entity<Alignement>()
+                .HasOne(u => u.Univers)
+                .WithMany(p => p.LAlign)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Competences>()
+                .HasOne(u => u.Univers)
+                .WithMany(p => p.LComp)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<ClasseMetier>()
+                .HasOne(u => u.Univers)
+                .WithMany(p => p.LClasseMet)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Calendrier>()
+                .HasOne(u => u.Univers)
+                .WithMany(p => p.LCalendr)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<PaysContree>()
+                .HasOne(u => u.Univers)
+                .WithMany(p => p.LPays)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Race>()
+                .HasOne(u => u.Univers)
+                .WithMany(p => p.LRace)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Religion>()
+                .HasOne(u => u.Univers)
+                .WithMany(p => p.LRelig)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Organisations>()
+                .HasOne(u => u.Univers)
+                .WithMany(p => p.LOrganisa)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Mois>()
+                .HasOne(u => u.Calendrier)
+                .WithMany(p => p.LMois)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<CalendriersMultiples>()
+                .HasOne(u => u.Calendrier)
+                .WithMany(p => p.LCalendMult)
+                .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<CalendriersMultiples>()
+                .HasOne(u => u.PaysContree)
+                .WithMany(p => p.LCalend)
+                .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<PJ>()
+                .HasOne(u => u.PaysContree)
+                .WithMany(p => p.LPJ)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<PJ>()
+                .HasOne(u => u.Alignement)
+                .WithMany(p => p.LPJ)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<PJ>()
+                .HasOne(u => u.Religion)
+                .WithMany(p => p.LPJ)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<PJ>()
+                .HasOne(u => u.Organisations)
+                .WithMany(p => p.LPJ)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<PJ>()
+                .HasOne(u => u.Race)
+                .WithMany(p => p.LPJ)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<ClassePJ>()
+                .HasOne(u => u.PJ)
+                .WithMany(p => p.LClasses)
+                .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<ClassePJ>()
+                .HasOne(u => u.ClasseMetier)
+                .WithMany(p => p.LClassPJ)
+                .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<CompetencesPJ>()
+                .HasOne(u => u.PJ)
+                .WithMany(p => p.LComp)
+                .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<CompetencesPJ>()
+                .HasOne(u => u.Competences)
+                .WithMany(p => p.LComp)
+                .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<CaracteristiquesPJ>()
+                .HasOne(u => u.PJ)
+                .WithMany(p => p.LCarac)
+                .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<CaracteristiquesPJ>()
+                .HasOne(u => u.Caracteristiques)
+                .WithMany(p => p.LCarac)
+                .OnDelete(DeleteBehavior.ClientCascade);
+            #endregion
+
+            #region Indexes
+            modelBuilder.Entity<ChronoPJ>()
+                .HasIndex(p => new { p.PJId, p.MoisId, p.Annee })
+                .IsUnique();
+
+            modelBuilder.Entity<RelationsPJ>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+
+            #endregion
 
 
 

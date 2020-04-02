@@ -19,4 +19,6 @@ namespace ProsceneLite.Models
     public enum StatuContact { connecte, occupe, nepasdéranger, deretourbientot, absent, deconnecte}
 
     public enum StatuValid { redact, relecture, validation, validé}
+
+    public enum NivRelation { LienFaible, LienFort, LienIntime}
 }

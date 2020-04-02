@@ -8,7 +8,6 @@ namespace ProsceneLite.Data
     [Table("Spots")]
     public class Spots
     {
-
         #region Key(s)
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }

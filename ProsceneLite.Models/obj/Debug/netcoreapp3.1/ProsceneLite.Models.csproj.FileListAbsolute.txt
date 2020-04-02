@@ -1,0 +1,9 @@
+C:\Users\A273168\Source\Repos\proscenelite\ProsceneLite.Models\bin\Debug\netcoreapp3.1\ProsceneLite.Models.deps.json
+C:\Users\A273168\Source\Repos\proscenelite\ProsceneLite.Models\bin\Debug\netcoreapp3.1\ProsceneLite.Models.dll
+C:\Users\A273168\Source\Repos\proscenelite\ProsceneLite.Models\bin\Debug\netcoreapp3.1\ProsceneLite.Models.pdb
+C:\Users\A273168\Source\Repos\proscenelite\ProsceneLite.Models\obj\Debug\netcoreapp3.1\ProsceneLite.Models.csprojAssemblyReference.cache
+C:\Users\A273168\Source\Repos\proscenelite\ProsceneLite.Models\obj\Debug\netcoreapp3.1\ProsceneLite.Models.csproj.CoreCompileInputs.cache
+C:\Users\A273168\Source\Repos\proscenelite\ProsceneLite.Models\obj\Debug\netcoreapp3.1\ProsceneLite.Models.AssemblyInfoInputs.cache
+C:\Users\A273168\Source\Repos\proscenelite\ProsceneLite.Models\obj\Debug\netcoreapp3.1\ProsceneLite.Models.AssemblyInfo.cs
+C:\Users\A273168\Source\Repos\proscenelite\ProsceneLite.Models\obj\Debug\netcoreapp3.1\ProsceneLite.Models.dll
+C:\Users\A273168\Source\Repos\proscenelite\ProsceneLite.Models\obj\Debug\netcoreapp3.1\ProsceneLite.Models.pdb

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using ProsceneLite.Data;
+using ProsceneLite.Models;
 
 namespace ProsceneLite.DataAccess
 {
@@ -17,9 +19,5 @@ namespace ProsceneLite.DataAccess
         Task Delete(Models.Univers univ);
         Task<Models.Univers> GetUnivers(Guid id);
 
-        Task<Guid> Create(Models.ListeChampsUnivers lcu);
-        Task Update(Models.ListeChampsUnivers lcu);
-        Task Delete(Models.ListeChampsUnivers lcu);
-        Task<Models.ListeChampsUnivers> GetListeChampsUnivers(Guid id);
     }
 }

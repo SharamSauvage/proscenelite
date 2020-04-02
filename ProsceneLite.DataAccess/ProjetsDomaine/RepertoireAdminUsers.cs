@@ -18,7 +18,7 @@ namespace ProsceneLite.DataAccess
         }
     
 
-    #region CReates
+        #region CReates
         public async Task<Guid> Create(Models.Utilisateurs util)
         {
             try
@@ -46,140 +46,6 @@ namespace ProsceneLite.DataAccess
                 Console.WriteLine(e.Message);
                 return util.Id;
             }
-        }
-        public async Task<Guid> Create(Models.UtilisateursEntites utilent)
-        {
-            try
-            { 
-                var context = CreateContext();
-                var util = await context._Utilisateurs.FindAsync(utilent.UtilisateurId);
-                var ent = await context._Entites.FindAsync(utilent.EntiteId);
-                if(util!=null && ent!=null)
-                {
-                    var created = new Data.UtilisateursEntites
-                    {
-                        UtilisateurId=utilent.UtilisateurId,
-                        EntiteId=utilent.EntiteId,
-                        EstPermanent=utilent.EstPermanent
-                    };
-                    var enr = await context
-                        ._UtilisateursEntites
-                        .AddAsync(created);
-                    await context.SaveChangesAsync();
-                    return enr.Entity.EntiteId;
-                }
-                else
-                {
-                    return utilent.UtilisateurId;
-                }
-            }
-            catch (DbUpdateException e)
-            {
-                Console.WriteLine(e.Message);
-                return utilent.EntiteId;
-            }
-        }
-        public async Task<Guid> Create(Models.Entite enti)
-        {
-            try
-            { 
-                var context = CreateContext();
-                var util = await context._Utilisateurs.FindAsync(enti.ReprLegalId);
-                if (util!=null)
-                {
-                    int T;
-                    switch (enti.TypeEntite)
-                    {
-                        case TypoEntite.Association:
-                            T = 0;
-                            break;
-                        case TypoEntite.Collectif:
-                            T = 1;
-                            break;
-                        case TypoEntite.Entreprise:
-                            T = 2;
-                            break;
-                        case TypoEntite.Particulier:
-                            T = 3;
-                            break;
-                        case TypoEntite.Autre:
-                            T = 4;
-                            break;
-                        default:
-                            T = 0;
-                            break;
-                    }
-                    var created = new Data.Entite
-                    {
-                        Id = enti.Id,
-                        Nom = enti.Nom,
-                        IdLegale = enti.IdLegale,
-                        Logo = enti.Logo,
-                        ReprLegalId = enti.ReprLegalId,
-                        TypeEntite = T
-                    };
-
-                    var enr = await context
-                        ._Entites
-                        .AddAsync(created);
-                    await context.SaveChangesAsync();
-                    return enr.Entity.Id;
-                }
-                else
-                { return enti.Id; }
-            }
-            catch (DbUpdateException e)
-            {
-                Console.WriteLine(e.Message);
-                return enti.Id;
-            }
-        }
-        public async Task<Guid> Create(Models.EntiteBanque entbk)
-        {
-            try
-            { 
-                var context = CreateContext();
-                var enti = await context._Entites.FindAsync(entbk.EntiteId);
-                if(enti!=null)
-                {
-                    int T;
-                    switch (entbk.TypoBk)
-                    {
-                        case TypoBanque.CompteBanque:
-                            T = 0;
-                            break;
-                        case TypoBanque.Paypal:
-                            T = 1;
-                            break;
-                        case TypoBanque.HelloAsso:
-                            T = 2;
-                            break;
-                        default:
-                            T = 0;
-                            break;
-                    }
-                    
-                    var created = new Data.EntiteBanque
-                    {
-                        EntiteId = entbk.EntiteId,
-                        TypoBk = T,
-                        Compte=entbk.Compte
-                    };
-                    var enr = await context
-                        ._EntiteBanques
-                        .AddAsync(created);
-                    await context.SaveChangesAsync();
-                    return enr.Entity.EntiteId;
-                }
-                else
-                { return entbk.EntiteId; }
-            }
-            catch (DbUpdateException e)
-            {
-                Console.WriteLine(e.Message);
-                return entbk.EntiteId;
-            }
-
         }
         public async Task<Guid> Create(Models.Pays ppays)
         {
@@ -258,72 +124,6 @@ namespace ProsceneLite.DataAccess
             {
                 Console.WriteLine(e.Message);
                 return adr.Id;
-            }
-        }
-        public async Task<Guid> Create(Models.Entrepot entrp)
-        {
-            try
-            { 
-                var context = CreateContext();
-                var util = await context._Utilisateurs.FindAsync(entrp.UtilisateurPropId);
-                var adr = await context._Adresse.FindAsync(entrp.AdresseId);
-                if (util != null && adr!=null)
-                {
-                    var created = new Data.Entrepot
-                    {
-                        Id=entrp.Id,
-                        UtilisateurPropId=entrp.UtilisateurPropId,
-                        AdresseId=entrp.AdresseId,
-                        NomEntrepot=entrp.NomEntrepot,
-                        Partage=entrp.Partage,
-                    };
-                    var enr = await context
-                        ._Entrepots
-                        .AddAsync(created);
-                    await context.SaveChangesAsync();
-                    return enr.Entity.Id;
-                }
-                else
-                    return entrp.Id;
-            }
-            catch (DbUpdateException e)
-            {
-                Console.WriteLine(e.Message);
-                return entrp.Id;
-            }
-        }
-        public async Task<Guid> Create(Models.StockEntrepot stckentr )
-        {
-            try
-            { 
-                var context = CreateContext();
-                var entrpt = await context._Entrepots.FindAsync(stckentr.EntrepotId);
-                if (entrpt != null)
-                {
-                    var created = new Data.StockEntrepot
-                    {
-                        Id = stckentr.Id,
-                        EntrepotId = stckentr.EntrepotId,
-                        DesignationItem = stckentr.DesignationItem,
-                        Quantite = stckentr.Quantite,
-                        CheminPhoto = stckentr.CheminPhoto,
-                        Photo = stckentr.Photo,
-                        QRCode = stckentr.QRCode,
-                        Remarque = stckentr.Remarque
-                    };
-                    var enr = await context
-                        ._StockEntrepots
-                        .AddAsync(created);
-                    await context.SaveChangesAsync();
-                    return enr.Entity.Id;
-                }
-                else
-                    return stckentr.Id;
-            }
-            catch (DbUpdateException e)
-            {
-                Console.WriteLine(e.Message);
-                return stckentr.Id;
             }
         }
         public async Task<Guid> Create(Models.Social soc)
@@ -457,101 +257,6 @@ namespace ProsceneLite.DataAccess
                 Console.WriteLine(e.Message);
             }
         }
-        public async Task Update(Models.UtilisateursEntites utilent)
-        {
-            try
-            {
-                var context = CreateContext();
-                var toUpdate = await context._UtilisateursEntites.FindAsync(utilent.EntiteId, utilent.UtilisateurId);
-                if (toUpdate!=null)
-                {
-                    toUpdate.EstPermanent = utilent.EstPermanent;
-                    await context.SaveChangesAsync();
-                }
-            }
-            catch (DbUpdateException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        public async Task Update(Models.Entite enti)
-        {
-            try
-            {
-                var context = CreateContext();
-                var toCheck =  await context._Utilisateurs.FindAsync(enti.ReprLegalId);
-                var toUpdate = await context._Entites.FindAsync(enti.Id);
-                if (toUpdate!=null && toCheck!=null)
-                {
-                    toUpdate.Nom = enti.Nom;
-                    toUpdate.IdLegale = enti.IdLegale;
-                    toUpdate.Logo = enti.Logo;
-                    toUpdate.ReprLegalId = enti.ReprLegalId;
-                    switch (enti.TypeEntite)
-                    {
-                        case TypoEntite.Association:
-                            toUpdate.TypeEntite = 0;
-                            break;
-                        case TypoEntite.Collectif:
-                            toUpdate.TypeEntite = 1;
-                            break;
-                        case TypoEntite.Entreprise:
-                            toUpdate.TypeEntite = 2;
-                            break;
-                        case TypoEntite.Particulier:
-                            toUpdate.TypeEntite = 3;
-                            break;
-                        case TypoEntite.Autre:
-                            toUpdate.TypeEntite = 4;
-                            break;
-                        default:
-                            toUpdate.TypeEntite = 0;
-                            break;
-
-
-                    }
-                    await context.SaveChangesAsync();
-                }
-            }
-            catch (DbUpdateException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        public async Task Update(Models.EntiteBanque entbk)
-        {
-            try
-            {
-                var context = CreateContext();
-                int T;
-                switch (entbk.TypoBk)
-                {
-                    case TypoBanque.CompteBanque:
-                        T = 0;
-                        break;
-                    case TypoBanque.Paypal:
-                        T = 1;
-                        break;
-                    case TypoBanque.HelloAsso:
-                        T = 2;
-                        break;
-                    default:
-                        T = 0;
-                        break;
-                }
-                var toUpdate = await context._EntiteBanques.FindAsync(entbk.EntiteId, T);
-                var toCheck = await context._Entites.FindAsync(entbk.EntiteId);
-                if (toUpdate!=null && toCheck!=null)
-                {
-                    toUpdate.Compte = entbk.Compte;
-                    await context.SaveChangesAsync();
-                }
-            }
-            catch (DbUpdateException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
         public async Task Update(Models.Pays ppays)
         {
             try
@@ -606,55 +311,6 @@ namespace ProsceneLite.DataAccess
                     toUpdate.Pays = adr.Pays;
                     await context.SaveChangesAsync();
                 }
-            }
-            catch (DbUpdateException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        public async Task Update(Models.Entrepot entrp)
-        {
-            try
-            {
-                var context = CreateContext();
-                var toUpdate = await context._Entrepots.FindAsync(entrp.Id);
-                var toCheckAdr = await context._Adresse.FindAsync(entrp.AdresseId);
-                var toCheckUser = await context._Utilisateurs.FindAsync(entrp.UtilisateurPropId);
-
-                if(toUpdate!=null && toCheckAdr!=null && toCheckUser!=null)
-                {
-                    toUpdate.NomEntrepot = entrp.NomEntrepot;
-                    toUpdate.Partage = entrp.Partage;
-                    toUpdate.UtilisateurPropId = entrp.UtilisateurPropId;
-                    toUpdate.AdresseId = entrp.AdresseId;
-                    await context.SaveChangesAsync();
-                }
-            }
-            catch (DbUpdateException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        public async Task Update(Models.StockEntrepot stckentr)
-        {
-            try
-            {
-                var context = CreateContext();
-                var toUpdate = await context._StockEntrepots.FindAsync(stckentr.Id);
-                var toCheck = await context._Entrepots.FindAsync(stckentr.EntrepotId);
-                
-                if (toCheck!=null && toUpdate!=null)
-                {
-                    toUpdate.DesignationItem = stckentr.DesignationItem;
-                    toUpdate.Quantite = stckentr.Quantite;
-                    toUpdate.CheminPhoto = stckentr.CheminPhoto;
-                    toUpdate.EntrepotId = stckentr.EntrepotId;
-                    toUpdate.Photo = stckentr.Photo;
-                    toUpdate.QRCode = stckentr.QRCode;
-                    toUpdate.Remarque = stckentr.Remarque;
-                    await context.SaveChangesAsync();
-                }
-
             }
             catch (DbUpdateException e)
             {
@@ -773,77 +429,7 @@ namespace ProsceneLite.DataAccess
                 await context.SaveChangesAsync();
             }
         }
-        public async Task Delete (Models.UtilisateursEntites utilent)
-        {
-            var context = CreateContext();
-            var toDelete = await context._UtilisateursEntites.FindAsync(utilent.UtilisateurId, utilent.EntiteId);
-            if (toDelete != null)
-            { 
-                context._UtilisateursEntites.Remove(toDelete);
-                await context.SaveChangesAsync();
-            }
-
-        }
-        public async Task Delete(Models.Entite enti)
-        {
-            var context = CreateContext();
-            var toDelete = await context._Entites.FindAsync(enti.Id);
-            if (toDelete!=null)
-            {
-                var utilEnt = context._UtilisateursEntites.Where(u => u.EntiteId == enti.Id).ToList();
-                var bkEnt = context._EntiteBanques.Where(u => u.EntiteId == enti.Id).ToList();
-                var adEnt = context._AdressesEntites.Where(u => u.EntiteId == enti.Id).ToList();
-                foreach (var membre in utilEnt)
-                {
-                    context._UtilisateursEntites.Remove(membre);
-                }
-                foreach (var banque in bkEnt)
-                {
-                    context._EntiteBanques.Remove(banque);
-                }
-                foreach (var adresse in adEnt)
-                {
-                    //commenté parce que l'adresse peut aussi être celui d'un utilisateur...
-                    //signifie qu'il faut une routine qui supprime toutes les adresses non affectées régulièrement...
-                    /*
-                     * var adasupp = context._Adresse.Where(u => u.Id == adresse.AdresseId).ToList();
-                    foreach (var adr1 in adasupp)
-                    {
-                        context._Adresse.Remove(adr1);
-                    }
-                    */
-                    context._AdressesEntites.Remove(adresse);
-                }
-                context._Entites.Remove(toDelete);
-                await context.SaveChangesAsync();
-            }
-        }
-        public async Task Delete(Models.EntiteBanque entbk)
-        {
-            var context = CreateContext();
-            int T;
-            switch (entbk.TypoBk)
-            {
-                case TypoBanque.CompteBanque:
-                    T = 0;
-                    break;
-                case TypoBanque.Paypal:
-                    T = 1;
-                    break;
-                case TypoBanque.HelloAsso:
-                    T = 2;
-                    break;
-                default:
-                    T = 0;
-                    break;
-            }
-            var toDelete = await context._EntiteBanques.FindAsync(entbk.EntiteId, T);
-            if (toDelete!=null)
-            {
-                context._EntiteBanques.Remove(toDelete);
-                await context.SaveChangesAsync();
-            }
-        }
+        
         public async Task Delete(Models.Pays ppays)
         {
             var contexte = CreateContext();
@@ -868,14 +454,7 @@ namespace ProsceneLite.DataAccess
         {
 
         }
-        public async Task Delete(Models.Entrepot entrp)
-        {
-
-        }
-        public async Task Delete(Models.StockEntrepot stckentr)
-        {
-
-        }
+        
         public async Task Delete(Models.Social soc)
         {
 

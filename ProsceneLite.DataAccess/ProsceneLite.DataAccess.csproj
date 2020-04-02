@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Proscene.Data\ProsceneLite.Data.csproj" />
-    <ProjectReference Include="..\Proscene.Models\ProsceneLite.Models.csproj" />
+    <ProjectReference Include="..\ProsceneLite.Data\ProsceneLite.Data.csproj" />
+    <ProjectReference Include="..\ProsceneLite.Models\ProsceneLite.Models.csproj" />
   </ItemGroup>
 
 </Project>
