@@ -6,8 +6,8 @@
   "libraries": {},
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj",
-      "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj"
+      "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Data\\ProsceneLite.Data.csproj",
+      "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Models\\ProsceneLite.Models.csproj"
     ]
   },
   "packageFolders": {
@@ -17,11 +17,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\ProsceneLite.DataAccess\\ProsceneLite.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\ProsceneLite.DataAccess\\ProsceneLite.DataAccess.csproj",
       "projectName": "ProsceneLite.DataAccess",
-      "projectPath": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\ProsceneLite.DataAccess\\ProsceneLite.DataAccess.csproj",
+      "projectPath": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\ProsceneLite.DataAccess\\ProsceneLite.DataAccess.csproj",
       "packagesPath": "C:\\Users\\A273168\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\ProsceneLite.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\ProsceneLite.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -40,11 +40,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj": {
-              "projectPath": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj"
+            "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Data\\ProsceneLite.Data.csproj": {
+              "projectPath": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Data\\ProsceneLite.Data.csproj"
             },
-            "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj": {
-              "projectPath": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj"
+            "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Models\\ProsceneLite.Models.csproj": {
+              "projectPath": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Models\\ProsceneLite.Models.csproj"
             }
           }
         }
@@ -90,8 +90,8 @@
     {
       "code": "NU1104",
       "level": "Error",
-      "message": "Projet 'C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
-      "libraryId": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj",
+      "message": "Projet 'C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Models\\ProsceneLite.Models.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
+      "libraryId": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Models\\ProsceneLite.Models.csproj",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]
@@ -99,8 +99,8 @@
     {
       "code": "NU1104",
       "level": "Error",
-      "message": "Projet 'C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
-      "libraryId": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj",
+      "message": "Projet 'C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Data\\ProsceneLite.Data.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
+      "libraryId": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Data\\ProsceneLite.Data.csproj",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

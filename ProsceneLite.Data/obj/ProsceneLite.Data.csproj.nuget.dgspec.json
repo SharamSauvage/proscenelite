@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\ProsceneLite.Data\\ProsceneLite.Data.csproj": {}
+    "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\ProsceneLite.Data\\ProsceneLite.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\ProsceneLite.Data\\ProsceneLite.Data.csproj": {
+    "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\ProsceneLite.Data\\ProsceneLite.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\ProsceneLite.Data\\ProsceneLite.Data.csproj",
+        "projectUniqueName": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\ProsceneLite.Data\\ProsceneLite.Data.csproj",
         "projectName": "ProsceneLite.Data",
-        "projectPath": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\ProsceneLite.Data\\ProsceneLite.Data.csproj",
+        "projectPath": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\ProsceneLite.Data\\ProsceneLite.Data.csproj",
         "packagesPath": "C:\\Users\\A273168\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\ProsceneLite.Data\\obj\\",
+        "outputPath": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\ProsceneLite.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

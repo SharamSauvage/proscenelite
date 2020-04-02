@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7vfWgMTs5zWs4atDTwvJ1ybhjwfeSUZCkPyVjNaehyCPRMHxSvB6G3IHQ7P3DqbhyMlD17cJLsSC5xL8O/rJrA==",
+  "dgSpecHash": "CUb8MMJt1LbJ1r/fk+I9LC19xoSCyjNQdVEVXfB9irtJohLE+8M1Isq2zRm7CA0Hsb9rriVmHUhlYJHiIRzHhQ==",
   "success": false,
-  "projectFilePath": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\ProsceneLite.DataAccess\\ProsceneLite.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\ProsceneLite.DataAccess\\ProsceneLite.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\A273168\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
     "C:\\Users\\A273168\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
@@ -11,8 +11,8 @@
     {
       "code": "NU1104",
       "level": "Error",
-      "message": "Projet 'C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
-      "libraryId": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Models\\ProsceneLite.Models.csproj",
+      "message": "Projet 'C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Models\\ProsceneLite.Models.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
+      "libraryId": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Models\\ProsceneLite.Models.csproj",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]
@@ -20,8 +20,8 @@
     {
       "code": "NU1104",
       "level": "Error",
-      "message": "Projet 'C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
-      "libraryId": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\Proscene.Data\\ProsceneLite.Data.csproj",
+      "message": "Projet 'C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Data\\ProsceneLite.Data.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
+      "libraryId": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\Proscene.Data\\ProsceneLite.Data.csproj",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

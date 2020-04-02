@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oRmb2kYImzefSSqHsnEage/ROgAjI/QKSRli2fNctELGa9n0TLgEaPhRu57g6jgigaPsGladsorXXXaYPBXaPg==",
+  "dgSpecHash": "YptKS8RZ031vZi9X3ZHHgRlZOJ/v9krusO861lcZF+uVtf0EBmQ5pLSLNpUS+omXaHt0TVXXUjKdTUFMcrUgnA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\A273168\\Source\\Repos\\ProsceneLite\\ProsceneLite.Data\\ProsceneLite.Data.csproj",
+  "projectFilePath": "C:\\Users\\A273168\\Source\\Repos\\proscenelite\\ProsceneLite.Data\\ProsceneLite.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\A273168\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\A273168\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",
