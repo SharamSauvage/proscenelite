@@ -16,8 +16,17 @@ namespace ProsceneLite.Data
         public Guid PartiId { get; set; }
         #endregion
 
+        #region Indexes
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+        #endregion
+
         #region Champs
         public string Description { get; set; }
+
+        [InverseProperty(nameof(PartisPJ_BG.PartisPJ))]
+        public virtual ICollection<PartisPJ_BG> LPartisPJ_BG { get; set; }
+
         #endregion
 
         #region ForeignKeys

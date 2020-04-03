@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ProsceneLite.Data.Projet">
-    <Position X="18.5" Y="12.75" Width="1.75" />
+    <Position X="16" Y="14.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>CABCAAAAEAEAACAAEAAABBAASDAACIAAEAmAAIAAAEg=</HashCode>
       <FileName>Entities\Projet.cs</FileName>
@@ -11,7 +11,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Adresse">
-    <Position X="3.5" Y="13.75" Width="1.5" />
+    <Position X="19" Y="23.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IKACAAQAgCQAgAAAAAAAAAAAEAAAAAAAACAAAAABAAA=</HashCode>
       <FileName>Entities\Adresse.cs</FileName>
@@ -22,28 +22,28 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Pays">
-    <Position X="3.5" Y="11" Width="1.5" />
+    <Position X="19" Y="27.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAABAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Entities\Pays.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.Voies">
-    <Position X="0.5" Y="14" Width="1.5" />
+    <Position X="16" Y="24.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAgAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Voies.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.Utilisateurs">
-    <Position X="9.5" Y="16.75" Width="1.5" />
+    <Position X="22.25" Y="19.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAACgAAAACAAAAAAAAQAAACAACAAAAIAASAAAAgIAAA=</HashCode>
       <FileName>Entities\Utilisateurs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.AdressesUtilisateurs">
-    <Position X="9.5" Y="21.75" Width="1.75" />
+    <Position X="22" Y="24.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
       <FileName>Entities\AdressesUtilisateurs.cs</FileName>
@@ -54,7 +54,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.ProjetsUtilisateurs">
-    <Position X="13" Y="20.25" Width="1.5" />
+    <Position X="16.25" Y="21.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Entities\ProjetsUtilisateurs.cs</FileName>
@@ -65,14 +65,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.TyposUnivers">
-    <Position X="24.5" Y="9.25" Width="1.5" />
+    <Position X="3.5" Y="20.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAg=</HashCode>
       <FileName>Entities\TyposUnivers.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.Univers">
-    <Position X="21.5" Y="5.5" Width="1.5" />
+    <Position X="4.5" Y="13.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIACAEBAAAABAEACAAACIAYAAABwBAACAAAAAAAAAEA=</HashCode>
       <FileName>Entities\Univers.cs</FileName>
@@ -82,14 +82,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.TypoQuete">
-    <Position X="21.5" Y="14.5" Width="1.5" />
+    <Position X="19.25" Y="20.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>Entities\TypoQuete.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.Quete">
-    <Position X="15.5" Y="13.75" Width="1.5" />
+    <Position X="19.25" Y="15.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAECIIAAAEAAAFBAAIAAAAAACAAQAAAAAAAAGAQAAAA=</HashCode>
       <FileName>Entities\Quete.cs</FileName>
@@ -101,7 +101,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.PartisQuete">
-    <Position X="9.75" Y="12.5" Width="1.5" />
+    <Position X="16.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAICAAABCAAABAAACAAAAAAIgAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\PartisQuete.cs</FileName>
@@ -111,7 +111,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.PlotPointsQuete">
-    <Position X="19.5" Y="19" Width="1.5" />
+    <Position X="19.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAoAQCAAAADAAIAAAAAAAgABAgAAABQACTAAAAAA=</HashCode>
       <FileName>Entities\PlotPointsQuete.cs</FileName>
@@ -124,7 +124,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.ObjetsQuete">
-    <Position X="15.5" Y="18.5" Width="1.5" />
+    <Position X="22.25" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAKAAAACAAAABAAAAQEAAAAggEAgBAAAAEIAQBABAA=</HashCode>
       <FileName>Entities\ObjetsQuete.cs</FileName>
@@ -135,7 +135,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Spots">
-    <Position X="6.5" Y="11.75" Width="1.5" />
+    <Position X="25.25" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAQAAAAABAAAAAAAABBAAAAAAAAQAAAIAAAAAA=</HashCode>
       <FileName>Entities\Spots.cs</FileName>
@@ -145,14 +145,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.TypoSpot">
-    <Position X="6.5" Y="9.5" Width="1.5" />
+    <Position X="25.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Entities\TypoSpot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.Inscrits">
-    <Position X="9.5" Y="6.5" Width="1.5" />
+    <Position X="15.75" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAACAYAAAggAAAAAAAgAECAAACAAAAAAACAAUAQAAAA=</HashCode>
       <FileName>Entities\Inscrits.cs</FileName>
@@ -163,9 +163,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.PJ">
-    <Position X="15.5" Y="6.25" Width="1.5" />
+    <Position X="9.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>xAAiAABAAAEAAAAIAgAIkAQIIAAAAEAAAAAICAAAAGQ=</HashCode>
+      <HashCode>xAAiAABAAAEAgAAIAgAIkQQIIAAAAEAAAAAICAAAAGQ=</HashCode>
       <FileName>Entities\PJ.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -179,14 +179,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.PNJ">
-    <Position X="3.5" Y="17.75" Width="1.5" />
+    <Position X="28.25" Y="17" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAQAAAAAAAAAAAABAAAQAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Entities\PNJ.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProsceneLite.Data.Scene">
-    <Position X="12.5" Y="16" Width="1.5" />
+    <Position X="22.25" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAiAAEASAAQABAAAEAAAAAAgAAAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Scene.cs</FileName>
@@ -197,7 +197,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.PNJScene">
-    <Position X="6.5" Y="15" Width="1.75" />
+    <Position X="25" Y="17" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAgAAAAAAAQAAAEAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\PNJScene.cs</FileName>
@@ -208,7 +208,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.ObjetScene">
-    <Position X="13" Y="22.5" Width="1.5" />
+    <Position X="25.25" Y="14.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAgAAAAAAEAACAAAAAAAAAAAABAAA=</HashCode>
       <FileName>Entities\ObjetScene.cs</FileName>
@@ -219,9 +219,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.PartisPJ">
-    <Position X="12.5" Y="4.25" Width="1.5" />
+    <Position X="10.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgACAAAAAAAAAAAAAAAAAAEQAABAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAgACAAAAAAAAAAAAAAAAAAEQAABAAEAAA=</HashCode>
       <FileName>Entities\PartisPJ.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -230,7 +230,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Social">
-    <Position X="6.5" Y="17.5" Width="1.75" />
+    <Position X="25" Y="20.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAEAAAAAACAABAAgAAAAAAAEAAAAIAAAAAAA=</HashCode>
       <FileName>Entities\Social.cs</FileName>
@@ -241,7 +241,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Archetype">
-    <Position X="12.5" Y="13.25" Width="1.5" />
+    <Position X="3.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAAAAABAAAAAAAAAEAAAAAABg=</HashCode>
       <FileName>Entities\Archetype.cs</FileName>
@@ -251,7 +251,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.PaysContree">
-    <Position X="18.5" Y="4.25" Width="1.5" />
+    <Position X="6.75" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAEAAAAAAAAABCAAAAAAAAEAAAAAAAg=</HashCode>
       <FileName>Entities\PaysContree.cs</FileName>
@@ -261,7 +261,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Race">
-    <Position X="12.5" Y="10.25" Width="1.5" />
+    <Position X="13.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAACAAAAAABAAAAAAAAAEAAAAAAAg=</HashCode>
       <FileName>Entities\Race.cs</FileName>
@@ -271,7 +271,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Religion">
-    <Position X="12.5" Y="1.25" Width="1.5" />
+    <Position X="5.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAABAAAAAAAAAEAIAAAAAg=</HashCode>
       <FileName>Entities\Religion.cs</FileName>
@@ -281,7 +281,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Alignement">
-    <Position X="18.5" Y="1.25" Width="1.5" />
+    <Position X="13.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAgAAAAABAAAAAAAAAEAAAAAAAg=</HashCode>
       <FileName>Entities\Alignement.cs</FileName>
@@ -291,7 +291,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Organisations">
-    <Position X="18.5" Y="10.25" Width="1.5" />
+    <Position X="12.75" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAgAAAAAAAAAABAAAAAAAAAEAAAAAAAg=</HashCode>
       <FileName>Entities\Organisations.cs</FileName>
@@ -301,7 +301,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Calendrier">
-    <Position X="24.5" Y="6" Width="1.5" />
+    <Position X="0.5" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAIAAAIAAQAAgAAAAAAEAAAAAAAg=</HashCode>
       <FileName>Entities\Calendrier.cs</FileName>
@@ -311,9 +311,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Mois">
-    <Position X="24.5" Y="12.25" Width="1.5" />
+    <Position X="1.25" Y="10" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAABAAAAAAAAAgEAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAABAAAgAAAAAgEAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Mois.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -321,7 +321,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Caracteristiques">
-    <Position X="15.5" Y="0.5" Width="1.5" />
+    <Position X="6.75" Y="19.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAEAAAAAAEg=</HashCode>
       <FileName>Entities\Caracteristiques.cs</FileName>
@@ -331,7 +331,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.Competences">
-    <Position X="21" Y="2.5" Width="1.5" />
+    <Position X="1.75" Y="13.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAABAAAAAQABAAAAAAAAAAAAAAAAAAAEAAAAAAAg=</HashCode>
       <FileName>Entities\Competences.cs</FileName>
@@ -341,7 +341,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.CalendriersMultiples">
-    <Position X="23.5" Y="3" Width="1.5" />
+    <Position X="0.75" Y="19" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAAIAAAAgAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>Entities\CalendriersMultiples.cs</FileName>
@@ -352,7 +352,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.ClasseMetier">
-    <Position X="21.5" Y="10.5" Width="1.5" />
+    <Position X="9.25" Y="17.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAgABg=</HashCode>
       <FileName>Entities\ClasseMetier.cs</FileName>
@@ -362,7 +362,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.ClassePJ">
-    <Position X="15.5" Y="11.5" Width="1.5" />
+    <Position X="9.75" Y="15.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEUAAAAAAAAA=</HashCode>
       <FileName>Entities\ClassePJ.cs</FileName>
@@ -373,7 +373,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.CaracteristiquesPJ">
-    <Position X="15.5" Y="3.25" Width="1.5" />
+    <Position X="12.75" Y="13.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAEQAABAAAAAA=</HashCode>
       <FileName>Entities\CaracteristiquesPJ.cs</FileName>
@@ -384,7 +384,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.CompetencesPJ">
-    <Position X="18.5" Y="6.25" Width="1.5" />
+    <Position X="6.75" Y="13.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAABAAABAAAAAAAAAAAAAAAAAEQAAAAAAAAA=</HashCode>
       <FileName>Entities\CompetencesPJ.cs</FileName>
@@ -395,9 +395,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.ChronoPJ">
-    <Position X="12.5" Y="7.25" Width="1.5" />
+    <Position X="6" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQCAAAAAAAAIAAAAAABAAAAAAAAAAAAkQAAAAAAAAA=</HashCode>
+      <HashCode>AAQCAAAAAAAAIAAAAAABAAAAAAAAAAAAkQAAAAAAAAQ=</HashCode>
       <FileName>Entities\ChronoPJ.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -406,14 +406,57 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ProsceneLite.Data.RelationsPJ">
-    <Position X="18.5" Y="8" Width="1.5" />
+    <Position X="12.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAEgAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAA=</HashCode>
       <FileName>Entities\RelationsPJ.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="PJ" />
       <Property Name="PJ1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProsceneLite.Data.BgPJ">
+    <Position X="8.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCAIAAAAgAAAAAAAAAAAAAACAEAAAAEUAIgEAAAAA=</HashCode>
+      <FileName>Entities\BgPJ.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PartisPJ_BG" />
+      <Property Name="PersoPJ_BG" />
+      <Property Name="RelationsPJ_BG" />
+      <Property Name="PJ" />
+      <Property Name="ChronoPJ" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProsceneLite.Data.PartisPJ_BG">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAACAAAAAAAABABAAAAAAAAAAAAAAAAQAAAAAAAQ=</HashCode>
+      <FileName>Entities\PartisPJ_BG.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PartisPJ" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProsceneLite.Data.RelationsPJ_BG">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAKAAAAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAQ=</HashCode>
+      <FileName>Entities\RelationsPJ_BG.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RelationsPJ" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProsceneLite.Data.PersoPJ_BG">
+    <Position X="6.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAACAAAAAAAAAAAAAAAAAAAAAAAAAEQQAAAAAAAQ=</HashCode>
+      <FileName>Entities\PersoPJ_BG.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PJ" />
     </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />

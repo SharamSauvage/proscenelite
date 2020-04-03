@@ -18,6 +18,9 @@ namespace ProsceneLite.Data
         public Guid? CalendrierId { get; set; }
         public string NomMois { get; set; }
         public int NbJours { get; set; }
+
+        [InverseProperty(nameof(ChronoPJ.Mois))]
+        public virtual ICollection<ChronoPJ> LChronoPJ { get; set; }
         #endregion
 
         #region ForeignKeys

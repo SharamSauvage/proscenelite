@@ -6,23 +6,21 @@ using System.Text;
 
 namespace ProsceneLite.Data
 {
-    [Table("ChronoPJ")]
-    public class ChronoPJ
+    [Table("PersoPJ_BG")]
+    public class PersoPJ_BG
     {
         #region Key(s)
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
-
         #endregion
 
         #region Champs
-        public Guid PJId { get; set; }
-        public Guid MoisId { get; set; }
-        public int Annee { get; set; }
+        public Guid? PJId { get; set; }
+        public int Version { get; set; }
+        public string TitreBg { get; set; }
+        public string BG_Corps { get; set; }
 
-        public string DescrpFaits { get; set; }
-
-        [InverseProperty(nameof(BgPJ.ChronoPJ))]
+        [InverseProperty(nameof(BgPJ.PersoPJ_BG))]
         public virtual ICollection<BgPJ> LBgPJ { get; set; }
 
         #endregion
@@ -30,9 +28,6 @@ namespace ProsceneLite.Data
         #region ForeignKeys
         [ForeignKey(nameof(PJId))]
         public virtual PJ PJ
-        { get; set; }
-        [ForeignKey(nameof(MoisId))]
-        public virtual Mois Mois
         { get; set; }
         #endregion
 

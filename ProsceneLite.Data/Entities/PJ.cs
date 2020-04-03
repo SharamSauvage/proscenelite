@@ -38,7 +38,12 @@ namespace ProsceneLite.Data
         public virtual ICollection<CaracteristiquesPJ> LCarac { get; set; }
         [InverseProperty(nameof(ClassePJ.PJ))]
         public virtual ICollection<ClassePJ> LClasses { get; set; }
-
+        [InverseProperty(nameof(PersoPJ_BG.PJ))]
+        public virtual ICollection<PersoPJ_BG> LPerso_BG { get; set; }
+        [InverseProperty(nameof(BgPJ.PJ))]
+        public virtual ICollection<BgPJ> LBgPJ { get; set; }
+        [InverseProperty(nameof(ChronoPJ.PJ))]
+        public virtual ICollection<ChronoPJ> LChronoPJ { get; set; }
         #endregion
 
         #region ForeignKeys

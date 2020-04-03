@@ -53,6 +53,13 @@ namespace ProsceneLite.Data
         public virtual DbSet<Utilisateurs> _Utilisateurs { get; set; }
         public virtual DbSet<Voies> _Voies { get; set; }
 
+        public virtual DbSet<BgPJ> _BgPJ { get; set; }
+        public virtual DbSet<PartisPJ_BG> _PartisPJ_BG { get; set; }
+        public virtual DbSet<PersoPJ_BG> _PersoPJ_BG { get; set; }
+        public virtual DbSet<RelationsPJ_BG> _RelationsPJ_BG { get; set; }
+        public virtual DbSet<ChronoPJ> _ChronoPJ { get; set; }
+        public virtual DbSet<RelationsPJ> _RelationsPJ { get; set; }
+
 
         #endregion
 
@@ -366,16 +373,74 @@ namespace ProsceneLite.Data
                 .WithMany(p => p.LCarac)
                 .OnDelete(DeleteBehavior.ClientCascade);
             #endregion
+            #region GenereviaXL3
+            modelBuilder.Entity<BgPJ>()
+                .HasOne(u => u.PJ)
+                .WithMany(p => p.LBgPJ)
+                .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<BgPJ>()
+                .HasOne(u => u.PartisPJ_BG)
+                .WithMany(p => p.LBgPJ)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<BgPJ>()
+                .HasOne(u => u.RelationsPJ_BG)
+                .WithMany(p => p.LBgPJ)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<BgPJ>()
+                .HasOne(u => u.PersoPJ_BG)
+                .WithMany(p => p.LBgPJ)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<PersoPJ_BG>()
+                .HasOne(u => u.PJ)
+                .WithMany(p => p.LPerso_BG)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<PartisPJ_BG>()
+                .HasOne(u => u.PartisPJ)
+                .WithMany(p => p.LPartisPJ_BG)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<RelationsPJ_BG>()
+                .HasOne(u => u.RelationsPJ)
+                .WithMany(p => p.LRelationsPJ_BG)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<BgPJ>()
+                .HasOne(u => u.ChronoPJ)
+                .WithMany(p => p.LBgPJ)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<ChronoPJ>()
+                .HasOne(u => u.PJ)
+                .WithMany(p => p.LChronoPJ)
+                .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<ChronoPJ>()
+                .HasOne(u => u.Mois)
+                .WithMany(p => p.LChronoPJ)
+                .OnDelete(DeleteBehavior.ClientCascade);
+
+            #endregion
 
             #region Indexes
             modelBuilder.Entity<ChronoPJ>()
                 .HasIndex(p => new { p.PJId, p.MoisId, p.Annee })
                 .IsUnique();
-
+            
             modelBuilder.Entity<RelationsPJ>()
                 .HasIndex(p => p.Id)
                 .IsUnique();
 
+            modelBuilder.Entity<PartisPJ>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+            modelBuilder.Entity<BgPJ>()
+                .HasIndex(p => new { p.PJId, p.Ordre })
+                .IsUnique();
             #endregion
 
 

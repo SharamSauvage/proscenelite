@@ -26,6 +26,10 @@ namespace ProsceneLite.Data
 
         #region Champs
         public int? NivRelation { get; set; }
+
+        [InverseProperty(nameof(RelationsPJ_BG.RelationsPJ))]
+        public virtual ICollection<RelationsPJ_BG> LRelationsPJ_BG { get; set; }
+
         #endregion
 
         #region ForeignKeys
