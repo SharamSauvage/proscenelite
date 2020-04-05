@@ -16,6 +16,11 @@ namespace ProsceneLite.Data
         public Guid PaysContreeId { get; set; }
         #endregion
 
+        #region Indexes
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+        #endregion
+
         #region Champs
 
         #endregion

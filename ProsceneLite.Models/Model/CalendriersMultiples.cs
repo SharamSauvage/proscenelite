@@ -9,6 +9,11 @@ namespace ProsceneLite.Models
         #region Champs
         public Guid CalendrierId { get; set; }
         public Guid PaysContreeId { get; set; }
+
+        /// <summary>
+        /// Index non clé
+        /// </summary>
+        public Guid Id { get; set; }
         #endregion
 
         #region Constructeur

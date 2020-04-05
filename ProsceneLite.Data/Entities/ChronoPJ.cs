@@ -10,16 +10,22 @@ namespace ProsceneLite.Data
     public class ChronoPJ
     {
         #region Key(s)
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid Id { get; set; }
+        [Key]
+        public Guid PJId { get; set; }
+        [Key]
+        public Guid MoisId { get; set; }
+        [Key]
+        public int Annee { get; set; }
 
         #endregion
 
-        #region Champs
-        public Guid PJId { get; set; }
-        public Guid MoisId { get; set; }
-        public int Annee { get; set; }
+        #region Indexes
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+        #endregion
 
+
+        #region Champs
         public string DescrpFaits { get; set; }
 
         [InverseProperty(nameof(BgPJ.ChronoPJ))]

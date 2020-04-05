@@ -17,6 +17,11 @@ namespace ProsceneLite.Data
         public Guid ClasseId { get; set; }
         #endregion
 
+        #region Indexes
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+        #endregion
+
         #region Champs
         #endregion
 

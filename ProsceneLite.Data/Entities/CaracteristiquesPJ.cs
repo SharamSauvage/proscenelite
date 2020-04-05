@@ -16,6 +16,12 @@ namespace ProsceneLite.Data
         public Guid CaracId { get; set; }
         #endregion
 
+        #region Indexes
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+        #endregion
+
+
         #region Champs
         public string CaracVal { get; set; }
         #endregion

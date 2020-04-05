@@ -14,7 +14,10 @@ namespace ProsceneLite.Models
         public int Annee { get; set; }
 
         public string DescrpFaits { get; set; }
-
+        /// <summary>
+        /// Index non clé
+        /// </summary>
+        public Guid Id { get; set; }
         #endregion
 
         #region Constructeur

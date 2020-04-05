@@ -10,6 +10,11 @@ namespace ProsceneLite.Models
         public Guid PJId { get; set; }
 
         public Guid ClasseId { get; set; }
+
+        /// <summary>
+        /// Index non clé
+        /// </summary>
+        public Guid Id { get; set; }
         #endregion
 
         #region Constructeur

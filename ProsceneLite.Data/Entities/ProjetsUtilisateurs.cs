@@ -17,6 +17,11 @@ namespace ProsceneLite.Data
         public Guid UtilisateurId { get; set; }
         #endregion
 
+        #region Indexes
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+        #endregion
+
         #region ForeignKeys
         [ForeignKey(nameof(ProjetId))]
         public virtual Projet Projet

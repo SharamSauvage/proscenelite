@@ -16,6 +16,11 @@ namespace ProsceneLite.Data
         public Guid AdresseId { get; set; }
         #endregion
 
+        #region Indexes
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+        #endregion
+
         #region ForeignKeys
         [ForeignKey(nameof(AdresseId))]
         public virtual Adresse Adresse

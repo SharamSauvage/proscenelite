@@ -16,7 +16,11 @@ namespace ProsceneLite.Models
         public string DescriptionRoleScene { get; set; }
         public string Remarques { get; set; }
 
-        
+        /// <summary>
+        /// Index non clé
+        /// </summary>
+        public Guid Id { get; set; }
+
         #endregion
 
         #region Constructeur

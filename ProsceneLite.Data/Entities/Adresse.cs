@@ -34,16 +34,10 @@ namespace ProsceneLite.Data
         #region ForeignKeys
         [ForeignKey(nameof(Pays))]
         public virtual Pays Pays1
-        {
-            get;
-            set;
-        }
+        { get; set; }
         [ForeignKey(nameof(Voie))]
         public virtual Voies Voies
-        {
-            get;
-            set;
-        }
+        { get; set; }
         #endregion
     }
 }

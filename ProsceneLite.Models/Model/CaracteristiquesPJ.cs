@@ -11,6 +11,10 @@ namespace ProsceneLite.Models
         public Guid CaracId { get; set; }
 
         public string CaracVal { get; set; }
+        /// <summary>
+        /// Index non clé
+        /// </summary>
+        public Guid Id { get; set; }
         #endregion
 
         #region Constructeur

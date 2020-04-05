@@ -441,6 +441,37 @@ namespace ProsceneLite.Data
             modelBuilder.Entity<BgPJ>()
                 .HasIndex(p => new { p.PJId, p.Ordre })
                 .IsUnique();
+            modelBuilder.Entity<AdressesUtilisateurs>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+            modelBuilder.Entity<Social>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+            modelBuilder.Entity<CalendriersMultiples>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+            modelBuilder.Entity<CaracteristiquesPJ>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+            modelBuilder.Entity<ChronoPJ>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+            modelBuilder.Entity<ClassePJ>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+            modelBuilder.Entity<CompetencesPJ>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+            modelBuilder.Entity<ObjetScene>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+            modelBuilder.Entity<PNJScene>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+            modelBuilder.Entity<ProjetsUtilisateurs>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
+
             #endregion
 
 

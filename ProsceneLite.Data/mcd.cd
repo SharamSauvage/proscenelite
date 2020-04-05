@@ -45,7 +45,7 @@
   <Class Name="ProsceneLite.Data.AdressesUtilisateurs">
     <Position X="22" Y="24.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAQAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <HashCode>AAACQAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
       <FileName>Entities\AdressesUtilisateurs.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
