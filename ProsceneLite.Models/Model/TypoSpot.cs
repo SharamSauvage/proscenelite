@@ -11,8 +11,7 @@ namespace ProsceneLite.Models
         #region Champs
 
         public Guid Id { get; set; }
-
-        public string TypeSpot { get; set; } //décor, zone instanciée, escape room
+        public string TypeSpot { get; set; }
         #endregion
 
         #region Constructeur

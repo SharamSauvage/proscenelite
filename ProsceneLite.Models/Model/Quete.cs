@@ -14,7 +14,6 @@ namespace ProsceneLite.Models
         public StatuValid? StatuValidId { get; set; }
         public Guid? TypoQueteId { get; set; }
         public Guid? ProjetId { get; set; }
-
         public string SynopsisQuete { get; set; }
         #endregion
 

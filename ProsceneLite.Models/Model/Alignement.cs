@@ -8,7 +8,6 @@ namespace ProsceneLite.Models
     {
         #region Key(s)
         public Guid Id { get; set; }
-
         public Guid? UniversId { get; set; }
         public string NomAlignement { get; set; }
 

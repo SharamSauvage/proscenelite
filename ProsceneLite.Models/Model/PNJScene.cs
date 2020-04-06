@@ -10,15 +10,9 @@ namespace ProsceneLite.Models
     {
         #region Champs
         public Guid PNJId { get; set; }
-
         public Guid SceneId { get; set; }
-        
         public string DescriptionRoleScene { get; set; }
         public string Remarques { get; set; }
-
-        /// <summary>
-        /// Index non clé
-        /// </summary>
         public Guid Id { get; set; }
 
         #endregion

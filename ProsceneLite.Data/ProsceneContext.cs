@@ -430,11 +430,9 @@ namespace ProsceneLite.Data
             modelBuilder.Entity<ChronoPJ>()
                 .HasIndex(p => new { p.PJId, p.MoisId, p.Annee })
                 .IsUnique();
-            
             modelBuilder.Entity<RelationsPJ>()
                 .HasIndex(p => p.Id)
                 .IsUnique();
-
             modelBuilder.Entity<PartisPJ>()
                 .HasIndex(p => p.Id)
                 .IsUnique();
@@ -473,10 +471,6 @@ namespace ProsceneLite.Data
                 .IsUnique();
 
             #endregion
-
-
-
-
 
         }
     }

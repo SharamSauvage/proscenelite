@@ -9,7 +9,6 @@ namespace ProsceneLite.Models
         #region Champs
         
         public Guid Id { get; set; }
-        
         public string NomPays {get; set;}
         #endregion
 

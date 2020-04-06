@@ -15,7 +15,7 @@ namespace ProsceneLite.Data
         #endregion
 
         #region Champs
-        public Guid QueteId { get; set; }
+        public Guid? QueteId { get; set; }
         public string NomParti { get; set; }
         public string Synopsis { get; set; }
         public string But { get; set; }

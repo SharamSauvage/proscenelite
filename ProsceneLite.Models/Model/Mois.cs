@@ -10,7 +10,6 @@ namespace ProsceneLite.Models
         #region Champs
 
         public Guid Id { get; set; }
-
         public Guid? CalendrierId { get; set; }
         public string NomMois { get; set; }
         public int NbJours { get; set; }

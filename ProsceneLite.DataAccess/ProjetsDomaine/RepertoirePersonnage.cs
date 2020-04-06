@@ -25,7 +25,13 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.BgPJ
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = bgpj.Id,
+                    PJId = bgpj.PJId,
+                    Ordre = bgpj.Ordre,
+                    PersoBgId = bgpj.PersoBgId,
+                    RelationBgId = bgpj.RelationBgId,
+                    PartisBgId = bgpj.PartisBgId,
+                    ChronoPJId = bgpj.ChronoPJId,
                 };
                 var enr = await context
                 ._BgPJ
@@ -48,7 +54,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.CaracteristiquesPJ
                 {
-                    //ajouter les champs séparés par des , 
+                    PJId = caraPJ.PJId,
+                    CaracId = caraPJ.CaracId,
+                    CaracVal = caraPJ.CaracVal,
+                    Id = caraPJ.Id,
                 };
                 var enr = await context
                 ._CaracteristiquesPJ
@@ -71,7 +80,11 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.ChronoPJ
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = chroPJ.Id,
+                    PJId = chroPJ.PJId,
+                    MoisId = chroPJ.MoisId,
+                    Annee = chroPJ.Annee,
+                    DescrpFaits = chroPJ.DescrpFaits,
                 };
                 var enr = await context
                 ._ChronoPJ
@@ -94,7 +107,9 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.ClassePJ
                 {
-                    //ajouter les champs séparés par des , 
+                    PJId = clasPJ.PJId,
+                    ClasseId = clasPJ.ClasseId,
+                    Id = clasPJ.Id,
                 };
                 var enr = await context
                 ._ClassePJ
@@ -117,7 +132,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.CompetencesPJ
                 {
-                    //ajouter les champs séparés par des , 
+                    PJId = compPJ.PJId,
+                    CompetenceId = compPJ.CompetenceId,
+                    CompVal = compPJ.CompVal,
+                    Id = compPJ.Id,
                 };
                 var enr = await context
                 ._CompetencesPJ
@@ -140,7 +158,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.PartisPJ
                 {
-                    //ajouter les champs séparés par des , 
+                    PJId = partPJ.PJId,
+                    PartiId = partPJ.PartiId,
+                    Description = partPJ.Description,
+                    Id = partPJ.Id,
                 };
                 var enr = await context
                 ._PartisPJ
@@ -163,7 +184,11 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.PartisPJ_BG
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = partBg.Id,
+                    PartisPJId = partBg.PartisPJId,
+                    Version = partBg.Version,
+                    TitreBg = partBg.TitreBg,
+                    BG_Corps = partBg.BG_Corps,
                 };
                 var enr = await context
                 ._PartisPJ_BG
@@ -186,7 +211,11 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.PersoPJ_BG
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = perPJBg.Id,
+                    PJId = perPJBg.PJId,
+                    Version = perPJBg.Version,
+                    TitreBg = perPJBg.TitreBg,
+                    BG_Corps = perPJBg.BG_Corps,
                 };
                 var enr = await context
                 ._PersoPJ_BG
@@ -209,7 +238,12 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.PJ
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = pjs.Id,
+                    NomPJ = pjs.NomPJ,
+                    DdNPJ = pjs.DdNPJ,
+                    ArchetypeId = pjs.ArchetypeId,
+                    Synopsis = pjs.Synopsis,
+                    JoueurID = pjs.JoueurID,
                 };
                 var enr = await context
                 ._PJ
@@ -230,9 +264,20 @@ namespace ProsceneLite.DataAccess
             try
             {
                 var context = CreateContext();
+                int niv;
+                niv = relaPJ.NivRel switch
+                {
+                    NivRelation.LienFaible => niv = 0,
+                    NivRelation.LienFort => niv = 1,
+                    NivRelation.LienIntime => niv = 2,
+                    _ => niv = 0,
+                };
                 var created = new Data.RelationsPJ
                 {
-                    //ajouter les champs séparés par des , 
+                    PJ1Id = relaPJ.PJ1Id,
+                    PJ2Id = relaPJ.PJ2Id,
+                    Id = relaPJ.Id,
+                    NivRelation = niv,
                 };
                 var enr = await context
                 ._RelationsPJ
@@ -255,7 +300,11 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.RelationsPJ_BG
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = relaBG.Id,
+                    RelationId = relaBG.RelationId,
+                    Version = relaBG.Version,
+                    TitreBg = relaBG.TitreBg,
+                    BG_Corps = relaBG.BG_Corps,
                 };
                 var enr = await context
                 ._RelationsPJ_BG
@@ -281,7 +330,14 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._BgPJ.FindAsync(bgpj.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = bgpj.Id;
+                    toUpdate.PJId = bgpj.PJId;
+                    toUpdate.Ordre = bgpj.Ordre;
+                    toUpdate.PersoBgId = bgpj.PersoBgId;
+                    toUpdate.RelationBgId = bgpj.RelationBgId;
+                    toUpdate.PartisBgId = bgpj.PartisBgId;
+                    toUpdate.ChronoPJId = bgpj.ChronoPJId;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -299,7 +355,11 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._CaracteristiquesPJ.FindAsync(caraPJ.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.PJId = caraPJ.PJId;
+                    toUpdate.CaracId = caraPJ.CaracId;
+                    toUpdate.CaracVal = caraPJ.CaracVal;
+                    toUpdate.Id = caraPJ.Id;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -317,7 +377,12 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._ChronoPJ.FindAsync(chroPJ.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = chroPJ.Id;
+                    toUpdate.PJId = chroPJ.PJId;
+                    toUpdate.MoisId = chroPJ.MoisId;
+                    toUpdate.Annee = chroPJ.Annee;
+                    toUpdate.DescrpFaits = chroPJ.DescrpFaits;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -335,7 +400,10 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._ClassePJ.FindAsync(clasPJ.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.PJId = clasPJ.PJId;
+                    toUpdate.ClasseId = clasPJ.ClasseId;
+                    toUpdate.Id = clasPJ.Id;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -353,7 +421,11 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._CompetencesPJ.FindAsync(compPJ.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.PJId = compPJ.PJId;
+                    toUpdate.CompetenceId = compPJ.CompetenceId;
+                    toUpdate.CompVal = compPJ.CompVal;
+                    toUpdate.Id = compPJ.Id;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -371,7 +443,11 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._PartisPJ.FindAsync(partPJ.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.PJId = partPJ.PJId;
+                    toUpdate.PartiId = partPJ.PartiId;
+                    toUpdate.Description = partPJ.Description;
+                    toUpdate.Id = partPJ.Id;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -389,7 +465,12 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._PartisPJ_BG.FindAsync(partBg.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = partBg.Id;
+                    toUpdate.PartisPJId = partBg.PartisPJId;
+                    toUpdate.Version = partBg.Version;
+                    toUpdate.TitreBg = partBg.TitreBg;
+                    toUpdate.BG_Corps = partBg.BG_Corps;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -407,7 +488,12 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._PersoPJ_BG.FindAsync(perPJBg.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = perPJBg.Id;
+                    toUpdate.PJId = perPJBg.PJId;
+                    toUpdate.Version = perPJBg.Version;
+                    toUpdate.TitreBg = perPJBg.TitreBg;
+                    toUpdate.BG_Corps = perPJBg.BG_Corps;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -425,7 +511,13 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._PJ.FindAsync(pjs.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = pjs.Id;
+                    toUpdate.NomPJ = pjs.NomPJ;
+                    toUpdate.DdNPJ = pjs.DdNPJ;
+                    toUpdate.ArchetypeId = pjs.ArchetypeId;
+                    toUpdate.Synopsis = pjs.Synopsis;
+                    toUpdate.JoueurID = pjs.JoueurID;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -441,9 +533,21 @@ namespace ProsceneLite.DataAccess
             {
                 var context = CreateContext();
                 var toUpdate = await context._RelationsPJ.FindAsync(relaPJ.Id);
+                int niv;
+                niv = relaPJ.NivRel switch
+                {
+                    NivRelation.LienFaible => niv = 0,
+                    NivRelation.LienFort => niv = 1,
+                    NivRelation.LienIntime => niv = 2,
+                    _ => niv = 0,
+                };
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.PJ1Id = relaPJ.PJ1Id;
+                    toUpdate.PJ2Id = relaPJ.PJ2Id;
+                    toUpdate.Id = relaPJ.Id;
+                    toUpdate.NivRelation = niv;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -461,7 +565,11 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._RelationsPJ_BG.FindAsync(relaBG.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = relaBG.Id;
+                    toUpdate.RelationId = relaBG.RelationId;
+                    toUpdate.Version = relaBG.Version;
+                    toUpdate.TitreBg = relaBG.TitreBg;
+                    toUpdate.BG_Corps = relaBG.BG_Corps;
                     await context.SaveChangesAsync();
                 }
             }
@@ -683,7 +791,14 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.BgPJ
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    PJId = t.PJId,
+                    Ordre = t.Ordre,
+                    PersoBgId = t.PersoBgId,
+                    RelationBgId = t.RelationBgId,
+                    PartisBgId = t.PartisBgId,
+                    ChronoPJId = t.ChronoPJId,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -705,7 +820,11 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.CaracteristiquesPJ
                 {
-                    //récupérer les valeurs des champs
+                    PJId = t.PJId,
+                    CaracId = t.CaracId,
+                    CaracVal = t.CaracVal,
+                    Id = t.Id,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -727,7 +846,11 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.ChronoPJ
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    PJId = t.PJId,
+                    MoisId = t.MoisId,
+                    Annee = t.Annee,
+                    DescrpFaits = t.DescrpFaits,
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -749,7 +872,9 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.ClassePJ
                 {
-                    //récupérer les valeurs des champs
+                    PJId = t.PJId,
+                    ClasseId = t.ClasseId,
+                    Id = t.Id,
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -771,7 +896,11 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.CompetencesPJ
                 {
-                    //récupérer les valeurs des champs
+                    PJId = t.PJId,
+                    CompetenceId = t.CompetenceId,
+                    CompVal = t.CompVal,
+                    Id = t.Id,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -793,7 +922,11 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.PartisPJ
                 {
-                    //récupérer les valeurs des champs
+                    PJId = t.PJId,
+                    PartiId = t.PartiId,
+                    Description = t.Description,
+                    Id = t.Id,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -815,7 +948,12 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.PartisPJ_BG
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    PartisPJId = t.PartisPJId,
+                    Version = t.Version,
+                    TitreBg = t.TitreBg,
+                    BG_Corps = t.BG_Corps,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -837,7 +975,12 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.PersoPJ_BG
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    PJId = t.PJId,
+                    Version = t.Version,
+                    TitreBg = t.TitreBg,
+                    BG_Corps = t.BG_Corps,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -859,7 +1002,13 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.PJ
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    NomPJ = t.NomPJ,
+                    DdNPJ = t.DdNPJ,
+                    ArchetypeId = t.ArchetypeId,
+                    Synopsis = t.Synopsis,
+                    JoueurID = t.JoueurID,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -879,10 +1028,7 @@ namespace ProsceneLite.DataAccess
                 var toGet = await context
                 ._RelationsPJ
                 .Where(t => t.Id == pId)
-                .Select(t => new Models.RelationsPJ
-                {
-                    //récupérer les valeurs des champs
-                })
+                .Select(t => new Models.RelationsPJ(t.PJ1Id,t.PJ2Id,t.Id,t.NivRelation))
                 .FirstOrDefaultAsync();
                 return toGet;
             }
@@ -903,7 +1049,11 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.RelationsPJ_BG
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    RelationId = t.RelationId,
+                    Version = t.Version,
+                    TitreBg = t.TitreBg,
+                    BG_Corps = t.BG_Corps,
                 })
                 .FirstOrDefaultAsync();
                 return toGet;

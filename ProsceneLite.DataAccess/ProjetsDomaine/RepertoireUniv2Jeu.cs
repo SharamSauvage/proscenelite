@@ -25,7 +25,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.Alignement
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = alig.Id,
+                    UniversId = alig.UniversId,
+                    NomAlignement = alig.NomAlignement,
+
                 };
                 var enr = await context
                 ._Alignement
@@ -48,7 +51,11 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.Archetype
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = arch.Id,
+                    NomArchetype = arch.NomArchetype,
+                    Description = arch.Description,
+                    UniversId = arch.UniversId,
+
                 };
                 var enr = await context
                 ._Archetype
@@ -71,7 +78,11 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.Calendrier
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = cale.Id,
+                    UniversId = cale.UniversId,
+                    NbMois = cale.NbMois,
+                    NbJoursAnnée = cale.NbJoursAnnée,
+
                 };
                 var enr = await context
                 ._Calendrier
@@ -94,7 +105,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.CalendriersMultiples
                 {
-                    //ajouter les champs séparés par des , 
+                    CalendrierId = cale.CalendrierId,
+                    PaysContreeId = cale.PaysContreeId,
+                    Id = cale.Id,
+
                 };
                 var enr = await context
                 ._CalendriersMultiples
@@ -117,7 +131,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.Caracteristiques
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = cara.Id,
+                    UniversId = cara.UniversId,
+                    NomCarac = cara.NomCarac,
+
                 };
                 var enr = await context
                 ._Caracteristiques
@@ -140,7 +157,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.ClasseMetier
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = clas.Id,
+                    UniversId = clas.UniversId,
+                    NomClasse = clas.NomClasse,
+
                 };
                 var enr = await context
                 ._ClasseMetier
@@ -163,7 +183,11 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.Competences
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = comp.Id,
+                    UniversId = comp.UniversId,
+                    NomCompetence = comp.NomCompetence,
+                    EstNumerique = comp.EstNumerique,
+
                 };
                 var enr = await context
                 ._Competences
@@ -186,7 +210,11 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.Mois
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = mois.Id,
+                    CalendrierId = mois.CalendrierId,
+                    NomMois = mois.NomMois,
+                    NbJours = mois.NbJours,
+
                 };
                 var enr = await context
                 ._Mois
@@ -209,7 +237,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.Organisations
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = organs.Id,
+                    UniversId = organs.UniversId,
+                    NomOrganisation = organs.NomOrganisation,
+
                 };
                 var enr = await context
                 ._Organisations
@@ -232,7 +263,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.PaysContree
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = payscontr.Id,
+                    UniversId = payscontr.UniversId,
+                    Nom = payscontr.Nom,
+
                 };
                 var enr = await context
                 ._PaysContree
@@ -255,7 +289,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.Race
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = rac.Id,
+                    UniversId = rac.UniversId,
+                    NomRace = rac.NomRace,
+
                 };
                 var enr = await context
                 ._Race
@@ -278,7 +315,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.Religion
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = relig.Id,
+                    UniversId = relig.UniversId,
+                    NomReligion = relig.NomReligion,
+
                 };
                 var enr = await context
                 ._Religion
@@ -301,7 +341,9 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.TyposUnivers
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = typoUn.Id,
+                    TypeUnivers = typoUn.TypeUnivers,
+
                 };
                 var enr = await context
                 ._TyposUnivers
@@ -324,7 +366,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.Univers
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = univ.Id,
+                    NomUnivers = univ.NomUnivers,
+                    TypoUniversId = univ.TypoUniversId,
+
                 };
                 var enr = await context
                 ._Univers
@@ -350,7 +395,10 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._Alignement.FindAsync(alig.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = alig.Id;
+                    toUpdate.UniversId = alig.UniversId;
+                    toUpdate.NomAlignement = alig.NomAlignement;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -368,7 +416,11 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._Archetype.FindAsync(arch.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = arch.Id;
+                    toUpdate.NomArchetype = arch.NomArchetype;
+                    toUpdate.Description = arch.Description;
+                    toUpdate.UniversId = arch.UniversId;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -386,7 +438,11 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._Calendrier.FindAsync(cale.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = cale.Id;
+                    toUpdate.UniversId = cale.UniversId;
+                    toUpdate.NbMois = cale.NbMois;
+                    toUpdate.NbJoursAnnée = cale.NbJoursAnnée;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -404,7 +460,10 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._CalendriersMultiples.FindAsync(cale.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.CalendrierId = cale.CalendrierId;
+                    toUpdate.PaysContreeId = cale.PaysContreeId;
+                    toUpdate.Id = cale.Id;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -422,7 +481,10 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._Caracteristiques.FindAsync(cara.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = cara.Id;
+                    toUpdate.UniversId = cara.UniversId;
+                    toUpdate.NomCarac = cara.NomCarac;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -440,7 +502,10 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._ClasseMetier.FindAsync(clas.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = clas.Id;
+                    toUpdate.UniversId = clas.UniversId;
+                    toUpdate.NomClasse = clas.NomClasse;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -458,7 +523,11 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._Competences.FindAsync(comp.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = comp.Id;
+                    toUpdate.UniversId = comp.UniversId;
+                    toUpdate.NomCompetence = comp.NomCompetence;
+                    toUpdate.EstNumerique = comp.EstNumerique;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -476,7 +545,11 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._Mois.FindAsync(mois.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = mois.Id;
+                    toUpdate.CalendrierId = mois.CalendrierId;
+                    toUpdate.NomMois = mois.NomMois;
+                    toUpdate.NbJours = mois.NbJours;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -494,7 +567,10 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._Organisations.FindAsync(organs.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = organs.Id;
+                    toUpdate.UniversId = organs.UniversId;
+                    toUpdate.NomOrganisation = organs.NomOrganisation;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -512,7 +588,10 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._PaysContree.FindAsync(payscontr.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = payscontr.Id;
+                    toUpdate.UniversId = payscontr.UniversId;
+                    toUpdate.Nom = payscontr.Nom;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -530,7 +609,10 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._Race.FindAsync(rac.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = rac.Id;
+                    toUpdate.UniversId = rac.UniversId;
+                    toUpdate.NomRace = rac.NomRace;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -548,7 +630,10 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._Religion.FindAsync(relig.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = relig.Id;
+                    toUpdate.UniversId = relig.UniversId;
+                    toUpdate.NomReligion = relig.NomReligion;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -566,7 +651,9 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._TyposUnivers.FindAsync(typoUn.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = typoUn.Id;
+                    toUpdate.TypeUnivers = typoUn.TypeUnivers;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -584,7 +671,10 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._Univers.FindAsync(univ.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = univ.Id;
+                    toUpdate.NomUnivers = univ.NomUnivers;
+                    toUpdate.TypoUniversId = univ.TypoUniversId;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -860,7 +950,10 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.Alignement
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    UniversId = t.UniversId,
+                    NomAlignement = t.NomAlignement,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -882,7 +975,11 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.Archetype
                 {
-                  //récupérer les valeurs des champs
+                    Id = t.Id,
+                    NomArchetype = t.NomArchetype,
+                    Description = t.Description,
+                    UniversId = t.UniversId,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -904,7 +1001,11 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.Calendrier
                 {
-                  //récupérer les valeurs des champs
+                    Id = t.Id,
+                    UniversId = t.UniversId,
+                    NbMois = t.NbMois,
+                    NbJoursAnnée = t.NbJoursAnnée,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -926,7 +1027,10 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.CalendriersMultiples
                 {
-                //récupérer les valeurs des champs
+                    CalendrierId = t.CalendrierId,
+                    PaysContreeId = t.PaysContreeId,
+                    Id = t.Id,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -948,7 +1052,10 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.Caracteristiques
                 {
-                //récupérer les valeurs des champs
+                    Id = t.Id,
+                    UniversId = t.UniversId,
+                    NomCarac = t.NomCarac,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -970,7 +1077,10 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.ClasseMetier
                 {
-                //récupérer les valeurs des champs
+                    Id = t.Id,
+                    UniversId = t.UniversId,
+                    NomClasse = t.NomClasse,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -992,7 +1102,11 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.Competences
                 {
-                //récupérer les valeurs des champs
+                    Id = t.Id,
+                    UniversId = t.UniversId,
+                    NomCompetence = t.NomCompetence,
+                    EstNumerique = t.EstNumerique,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -1014,7 +1128,11 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.Mois
                 {
-                //récupérer les valeurs des champs
+                    Id = t.Id,
+                    CalendrierId = t.CalendrierId,
+                    NomMois = t.NomMois,
+                    NbJours = t.NbJours,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -1036,7 +1154,10 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.Organisations
                 {
-                //récupérer les valeurs des champs
+                    Id = t.Id,
+                    UniversId = t.UniversId,
+                    NomOrganisation = t.NomOrganisation,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -1058,7 +1179,10 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.PaysContree
                 {
-                //récupérer les valeurs des champs
+                    Id = t.Id,
+                    UniversId = t.UniversId,
+                    Nom = t.Nom,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -1080,7 +1204,10 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.Race
                 {
-                //récupérer les valeurs des champs
+                    Id = t.Id,
+                    UniversId = t.UniversId,
+                    NomRace = t.NomRace,
+                    
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -1102,7 +1229,10 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.Religion
                 {
-                //récupérer les valeurs des champs
+                    Id = t.Id,
+                    UniversId = t.UniversId,
+                    NomReligion = t.NomReligion,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -1124,7 +1254,9 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.TyposUnivers
                 {
-                //récupérer les valeurs des champs
+                    Id = t.Id,
+                    TypeUnivers = t.TypeUnivers,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -1146,7 +1278,10 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.Univers
                 {
-                //récupérer les valeurs des champs
+                    Id = t.Id,
+                    NomUnivers = t.NomUnivers,
+                    TypoUniversId = t.TypoUniversId,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;

@@ -8,11 +8,8 @@ namespace ProsceneLite.Models
     {
         #region Champs
         public Guid Id { get; set; }
-        
         public Guid PJId { get; set; }
         public int Ordre { get; set; }
-        
-
         public Guid? PersoBgId { get; set; }
         public Guid? RelationBgId { get; set; }
         public Guid? PartisBgId { get; set; }

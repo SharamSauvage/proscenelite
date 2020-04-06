@@ -14,7 +14,6 @@ namespace ProsceneLite.Models
         public DateTime DateFin { get; set; }
         public Guid QueteId { get; set; }
         public Guid SpotId { get; set; }
-
         public string DescriptionScene { get; set; }
 
         #endregion

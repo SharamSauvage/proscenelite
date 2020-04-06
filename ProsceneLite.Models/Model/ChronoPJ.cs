@@ -8,16 +8,11 @@ namespace ProsceneLite.Models
     {
         #region Champs
         public Guid Id { get; set; }
-
         public Guid PJId { get; set; }
         public Guid MoisId { get; set; }
         public int Annee { get; set; }
-
         public string DescrpFaits { get; set; }
-        /// <summary>
-        /// Index non clé
-        /// </summary>
-        public Guid Id { get; set; }
+
         #endregion
 
         #region Constructeur

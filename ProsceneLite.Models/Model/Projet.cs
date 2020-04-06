@@ -10,10 +10,9 @@ namespace ProsceneLite.Models
     {
         #region Champs
         public Guid Id { get; set; }
-
         public string Nom { get; set; }
         public Guid? UniversId { get; set; }
-        public TypoStockage? TypoStockageId { get; set; } //Enum => centralisé ou mixte il faut stocker l'adresse et user/mdp
+        public TypoStockage? TypoStockageId { get; set; }
         public DateTime DateDébutJeu { get; set; }
         public DateTime DateFinJeu { get; set; }
         public DateTime DateDebutInstal { get; set; }
@@ -27,7 +26,7 @@ namespace ProsceneLite.Models
         public bool RepasInclus { get; set; }
         public bool CouchagesInclus { get; set; }
         public int NbCouchages { get; set; }
-        public TypoInscription? TypoInscriptions { get; set; } //Enum
+        public TypoInscription? TypoInscriptions { get; set; }
         public Guid? TerrainId { get; set; }
 
 

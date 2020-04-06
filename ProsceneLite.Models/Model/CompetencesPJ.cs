@@ -11,9 +11,7 @@ namespace ProsceneLite.Models
 
         public Guid PJId { get; set; }
         public Guid CompetenceId { get; set; }
-
         public string CompVal { get; set; }
-
         /// <summary>
         /// Index non clé
         /// </summary>

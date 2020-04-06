@@ -9,14 +9,10 @@ namespace ProsceneLite.Models
         #region Champs
         
         public Guid Id { get; set; }
-
         public string NomPJ { get; set; }
-        public string DdNPJ { get; set; } //dans l'univers d'où le stockage en string
+        public string DdNPJ { get; set; }
         public Guid? ArchetypeId { get; set; } 
         public string Synopsis { get; set; }
-
-        //il faut une table pour les Objets de jeu, et une pour les Docs de Jeu ET une dernière pour le BG
-
         public Guid? JoueurID { get; set; }
 
         #endregion

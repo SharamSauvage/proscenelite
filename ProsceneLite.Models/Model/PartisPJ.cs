@@ -10,9 +10,7 @@ namespace ProsceneLite.Models
 
         public Guid PJId { get; set; }
         public Guid PartiId { get; set; }
-
         public string Description { get; set; }
-
         /// <summary>
         /// Index non clé
         /// </summary>

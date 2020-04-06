@@ -12,7 +12,6 @@ namespace ProsceneLite.Models
         #region Champs
         
         public Guid Id { get; set; }
-        
         public string NomUnivers { get; set; }
         public Guid? TypoUniversId { get; set; }
         

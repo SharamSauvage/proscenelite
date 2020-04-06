@@ -8,11 +8,8 @@ namespace ProsceneLite.Models
     {
         #region Champs
         public Guid ObjetId { get; set; }
-        
         public Guid SceneId { get; set; }
-        
         public string RoleObjet { get; set; }
-
         /// <summary>
         /// Index non clé
         /// </summary>

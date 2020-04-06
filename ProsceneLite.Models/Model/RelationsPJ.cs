@@ -9,9 +9,7 @@ namespace ProsceneLite.Models
         #region Champs
         public Guid PJ1Id { get; set; }
         public Guid PJ2Id { get; set; }
-
         public Guid Id { get; set; }
-
         public NivRelation? NivRel { get; set; }
 
         #endregion

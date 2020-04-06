@@ -8,9 +8,7 @@ namespace ProsceneLite.Models
     {
         #region Champs
         public Guid PJId { get; set; }
-
         public Guid ClasseId { get; set; }
-
         /// <summary>
         /// Index non clé
         /// </summary>

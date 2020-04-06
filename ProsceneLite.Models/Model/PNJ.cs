@@ -10,7 +10,6 @@ namespace ProsceneLite.Models
     {
         #region Champs
         public Guid Id { get; set; }
-
         public string NomPNJ { get; set; }
         public string DescrptPNJ { get; set; }
         public string DescrptCostume { get; set; }

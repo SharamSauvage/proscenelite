@@ -27,7 +27,7 @@ namespace ProsceneLite.Models
         #region Constructeur
         public ObjetsQuete() { }
         public ObjetsQuete(Guid pId, Guid? pQueteId, string pNomObj, string pPrez, string pSituDebJeu, string pEffet,
-            Byte[] pImg, Guid? pPPLieId, int? pStatValid, Guid? pStockId, bool pExiste, bool pEstDispo, bool pEstDem, bool pDemRezOk) 
+            Byte[] pImg, Guid? pPPLieId, int? pStatValid, Guid? pStockId, bool? pExiste, bool? pEstDispo, bool? pEstDem, bool? pDemRezOk) 
         {
             Id = pId;
             QueteId = pQueteId;

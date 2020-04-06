@@ -25,7 +25,10 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.ObjetScene
                 {
-                    //ajouter les champs séparés par des , 
+                    ObjetId = objeSc.ObjetId,
+                    SceneId = objeSc.SceneId,
+                    RoleObjet = objeSc.RoleObjet,
+                    Id = objeSc.Id,
                 };
                 var enr = await context
                 ._ObjetScene
@@ -46,9 +49,32 @@ namespace ProsceneLite.DataAccess
             try
             {
                 var context = CreateContext();
+                int Sv;
+                Sv = objeQt.StatuValidId switch
+                {
+                    StatuValid.redact => Sv = 0,
+                    StatuValid.relecture => Sv = 1,
+                    StatuValid.validation => Sv = 2,
+                    StatuValid.validé => Sv = 3,
+                    _ => Sv = 0,
+                };
                 var created = new Data.ObjetsQuete
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = objeQt.Id,
+                    QueteId = objeQt.QueteId,
+                    NomObjet = objeQt.NomObjet,
+                    PrezObjet = objeQt.PrezObjet,
+                    SituationDebJeu = objeQt.SituationDebJeu,
+                    Effet = objeQt.Effet,
+                    Image = objeQt.Image,
+                    PPLieId = objeQt.PPLieId,
+                    StatuValidId = Sv,
+                    StockId = objeQt.StockId,
+                    ExisteDeja = objeQt.ExisteDeja,
+                    EstDisponible = objeQt.EstDisponible,
+                    EstDemande = objeQt.EstDemande,
+                    DemandeResaOK = objeQt.DemandeResaOK,
+
                 };
                 var enr = await context
                 ._ObjetsQuete
@@ -71,7 +97,13 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.PartisQuete
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = partQt.Id,
+                    QueteId = partQt.QueteId,
+                    NomParti = partQt.NomParti,
+                    Synopsis = partQt.Synopsis,
+                    But = partQt.But,
+                    DebutEnJeu = partQt.DebutEnJeu,
+                    FinEnJeu = partQt.FinEnJeu,
                 };
                 var enr = await context
                 ._PartisQuete
@@ -94,7 +126,19 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.PlotPointsQuete
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = pptQt.Id,
+                    NomPlotPoint = pptQt.NomPlotPoint,
+                    DescrptPP = pptQt.DescrptPP,
+                    EstBorneTemps = pptQt.EstBorneTemps,
+                    DateDebut = pptQt.DateDebut,
+                    DateFin = pptQt.DateFin,
+                    EstLiéPP = pptQt.EstLiéPP,
+                    EstLiéQuete = pptQt.EstLiéQuete,
+                    EstLiéParti = pptQt.EstLiéParti,
+                    QueteId = pptQt.QueteId,
+                    ParentPPId = pptQt.ParentPPId,
+                    ParentPPQueteId = pptQt.ParentPPQueteId,
+                    PartiId = pptQt.PartiId,
                 };
                 var enr = await context
                 ._PlotPointsQuete
@@ -117,7 +161,11 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.PNJ
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = peunj.Id,
+                    NomPNJ = peunj.NomPNJ,
+                    DescrptPNJ = peunj.DescrptPNJ,
+                    DescrptCostume = peunj.DescrptCostume,
+                    DescrptAttitude = peunj.DescrptAttitude,
                 };
                 var enr = await context
                 ._PNJ
@@ -140,7 +188,11 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.PNJScene
                 {
-                    //ajouter les champs séparés par des , 
+                    PNJId = pnjscn.PNJId,
+                    SceneId = pnjscn.SceneId,
+                    DescriptionRoleScene = pnjscn.DescriptionRoleScene,
+                    Remarques = pnjscn.Remarques,
+                    Id = pnjscn.Id,
                 };
                 var enr = await context
                 ._PNJScene
@@ -161,9 +213,24 @@ namespace ProsceneLite.DataAccess
             try
             {
                 var context = CreateContext();
+                int Sv;
+                Sv = quet.StatuValidId switch
+                {
+                    StatuValid.redact => Sv = 0,
+                    StatuValid.relecture => Sv = 1,
+                    StatuValid.validation => Sv = 2,
+                    StatuValid.validé => Sv = 3,
+                    _ => Sv = 0,
+                };
                 var created = new Data.Quete
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = quet.Id,
+                    TitreQuete = quet.TitreQuete,
+                    ReferentId = quet.ReferentId,
+                    StatuValidId = Sv,
+                    TypoQueteId = quet.TypoQueteId,
+                    ProjetId = quet.ProjetId,
+                    SynopsisQuete = quet.SynopsisQuete,
                 };
                 var enr = await context
                 ._Quete
@@ -186,7 +253,12 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.Scene
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = scen.Id,
+                    DateDebut = scen.DateDebut,
+                    DateFin = scen.DateFin,
+                    QueteId = scen.QueteId,
+                    SpotId = scen.SpotId,
+                    DescriptionScene = scen.DescriptionScene,
                 };
                 var enr = await context
                 ._Scene
@@ -207,9 +279,22 @@ namespace ProsceneLite.DataAccess
             try
             {
                 var context = CreateContext();
+                int Sv;
+                Sv = spot.StatuValidId switch
+                {
+                    StatuValid.redact => Sv = 0,
+                    StatuValid.relecture => Sv = 1,
+                    StatuValid.validation => Sv = 2,
+                    StatuValid.validé => Sv = 3,
+                    _ => Sv = 0,
+                };
                 var created = new Data.Spots
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = spot.Id,
+                    NomSpot = spot.NomSpot,
+                    TypeSpotId = spot.TypeSpot,
+                    StatuValidId = Sv,
+                    Img = spot.Img,
                 };
                 var enr = await context
                 ._Spots
@@ -232,7 +317,8 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.TypoQuete
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = typoQt.Id,
+                    TypeQuete = typoQt.TypeQuete,
                 };
                 var enr = await context
                 ._TypoQuete
@@ -255,7 +341,8 @@ namespace ProsceneLite.DataAccess
                 var context = CreateContext();
                 var created = new Data.TypoSpot
                 {
-                    //ajouter les champs séparés par des , 
+                    Id = typoSp.Id,
+                    TypeSpot = typoSp.TypeSpot,
                 };
                 var enr = await context
                 ._TypoSpot
@@ -281,7 +368,10 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._ObjetScene.FindAsync(objeSc.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.ObjetId = objeSc.ObjetId;
+                    toUpdate.SceneId = objeSc.SceneId;
+                    toUpdate.RoleObjet = objeSc.RoleObjet;
+                    toUpdate.Id = objeSc.Id;
                     await context.SaveChangesAsync();
                 }
             }
@@ -296,10 +386,33 @@ namespace ProsceneLite.DataAccess
             try
             {
                 var context = CreateContext();
+                int Sv;
+                Sv = objeQt.StatuValidId switch
+                {
+                    StatuValid.redact => Sv = 0,
+                    StatuValid.relecture => Sv = 1,
+                    StatuValid.validation => Sv = 2,
+                    StatuValid.validé => Sv = 3,
+                    _ => Sv = 0,
+                };
                 var toUpdate = await context._ObjetsQuete.FindAsync(objeQt.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = objeQt.Id;
+                    toUpdate.QueteId = objeQt.QueteId;
+                    toUpdate.NomObjet = objeQt.NomObjet;
+                    toUpdate.PrezObjet = objeQt.PrezObjet;
+                    toUpdate.SituationDebJeu = objeQt.SituationDebJeu;
+                    toUpdate.Effet = objeQt.Effet;
+                    toUpdate.Image = objeQt.Image;
+                    toUpdate.PPLieId = objeQt.PPLieId;
+                    toUpdate.StatuValidId = Sv;
+                    toUpdate.StockId = objeQt.StockId;
+                    toUpdate.ExisteDeja = objeQt.ExisteDeja;
+                    toUpdate.EstDisponible = objeQt.EstDisponible;
+                    toUpdate.EstDemande = objeQt.EstDemande;
+                    toUpdate.DemandeResaOK = objeQt.DemandeResaOK;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -317,7 +430,14 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._PartisQuete.FindAsync(partQt.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = partQt.Id;
+                    toUpdate.QueteId = partQt.QueteId;
+                    toUpdate.NomParti = partQt.NomParti;
+                    toUpdate.Synopsis = partQt.Synopsis;
+                    toUpdate.But = partQt.But;
+                    toUpdate.DebutEnJeu = partQt.DebutEnJeu;
+                    toUpdate.FinEnJeu = partQt.FinEnJeu;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -335,7 +455,20 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._PlotPointsQuete.FindAsync(pptQt.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = pptQt.Id;
+                    toUpdate.NomPlotPoint = pptQt.NomPlotPoint;
+                    toUpdate.DescrptPP = pptQt.DescrptPP;
+                    toUpdate.EstBorneTemps = pptQt.EstBorneTemps;
+                    toUpdate.DateDebut = pptQt.DateDebut;
+                    toUpdate.DateFin = pptQt.DateFin;
+                    toUpdate.EstLiéPP = pptQt.EstLiéPP;
+                    toUpdate.EstLiéQuete = pptQt.EstLiéQuete;
+                    toUpdate.EstLiéParti = pptQt.EstLiéParti;
+                    toUpdate.QueteId = pptQt.QueteId;
+                    toUpdate.ParentPPId = pptQt.ParentPPId;
+                    toUpdate.ParentPPQueteId = pptQt.ParentPPQueteId;
+                    toUpdate.PartiId = pptQt.PartiId;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -353,7 +486,12 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._PNJ.FindAsync(peunj.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = peunj.Id;
+                    toUpdate.NomPNJ = peunj.NomPNJ;
+                    toUpdate.DescrptPNJ = peunj.DescrptPNJ;
+                    toUpdate.DescrptCostume = peunj.DescrptCostume;
+                    toUpdate.DescrptAttitude = peunj.DescrptAttitude;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -371,7 +509,12 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._PNJScene.FindAsync(pnjscn.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.PNJId = pnjscn.PNJId;
+                    toUpdate.SceneId = pnjscn.SceneId;
+                    toUpdate.DescriptionRoleScene = pnjscn.DescriptionRoleScene;
+                    toUpdate.Remarques = pnjscn.Remarques;
+                    toUpdate.Id = pnjscn.Id;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -386,10 +529,26 @@ namespace ProsceneLite.DataAccess
             try
             {
                 var context = CreateContext();
+                int Sv;
+                Sv = quet.StatuValidId switch
+                {
+                    StatuValid.redact => Sv = 0,
+                    StatuValid.relecture => Sv = 1,
+                    StatuValid.validation => Sv = 2,
+                    StatuValid.validé => Sv = 3,
+                    _ => Sv = 0,
+                };
                 var toUpdate = await context._Quete.FindAsync(quet.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = quet.Id;
+                    toUpdate.TitreQuete = quet.TitreQuete;
+                    toUpdate.ReferentId = quet.ReferentId;
+                    toUpdate.StatuValidId = Sv;
+                    toUpdate.TypoQueteId = quet.TypoQueteId;
+                    toUpdate.ProjetId = quet.ProjetId;
+                    toUpdate.SynopsisQuete = quet.SynopsisQuete;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -407,7 +566,13 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._Scene.FindAsync(scen.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = scen.Id;
+                    toUpdate.DateDebut = scen.DateDebut;
+                    toUpdate.DateFin = scen.DateFin;
+                    toUpdate.QueteId = scen.QueteId;
+                    toUpdate.SpotId = scen.SpotId;
+                    toUpdate.DescriptionScene = scen.DescriptionScene;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -422,10 +587,24 @@ namespace ProsceneLite.DataAccess
             try
             {
                 var context = CreateContext();
+                int Sv;
+                Sv = spot.StatuValidId switch
+                {
+                    StatuValid.redact => Sv = 0,
+                    StatuValid.relecture => Sv = 1,
+                    StatuValid.validation => Sv = 2,
+                    StatuValid.validé => Sv = 3,
+                    _ => Sv = 0,
+                };
                 var toUpdate = await context._Spots.FindAsync(spot.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = spot.Id;
+                    toUpdate.NomSpot = spot.NomSpot;
+                    toUpdate.TypeSpotId = spot.TypeSpot;
+                    toUpdate.StatuValidId = Sv;
+                    toUpdate.Img = spot.Img;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -443,7 +622,9 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._TypoQuete.FindAsync(typoQt.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = typoQt.Id;
+                    toUpdate.TypeQuete = typoQt.TypeQuete;
+
                     await context.SaveChangesAsync();
                 }
             }
@@ -461,7 +642,8 @@ namespace ProsceneLite.DataAccess
                 var toUpdate = await context._TypoSpot.FindAsync(typoSp.Id);
                 if (toUpdate != null)
                 {
-                    //mise à jour des champs séparation ;
+                    toUpdate.Id = typoSp.Id;
+                    toUpdate.TypeSpot = typoSp.TypeSpot;
                     await context.SaveChangesAsync();
                 }
             }
@@ -683,7 +865,10 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.ObjetScene
                 {
-                    //récupérer les valeurs des champs
+                    ObjetId = t.ObjetId,
+                    SceneId = t.SceneId,
+                    RoleObjet = t.RoleObjet,
+                    Id = t.Id,
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -703,10 +888,7 @@ namespace ProsceneLite.DataAccess
                 var toGet = await context
                 ._ObjetsQuete
                 .Where(t => t.Id == pId)
-                .Select(t => new Models.ObjetsQuete
-                {
-                    //récupérer les valeurs des champs
-                })
+                .Select(t => new Models.ObjetsQuete(t.Id,t.QueteId,t.NomObjet,t.PrezObjet,t.SituationDebJeu,t.Effet,t.Image,t.PPLieId,t.StatuValidId,t.StockId,t.ExisteDeja,t.EstDisponible,t.EstDemande,t.DemandeResaOK))
                 .FirstOrDefaultAsync();
                 return toGet;
             }
@@ -727,7 +909,14 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.PartisQuete
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    QueteId = t.QueteId,
+                    NomParti = t.NomParti,
+                    Synopsis = t.Synopsis,
+                    But = t.But,
+                    DebutEnJeu = t.DebutEnJeu,
+                    FinEnJeu = t.FinEnJeu,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -749,7 +938,20 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.PlotPointsQuete
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    NomPlotPoint = t.NomPlotPoint,
+                    DescrptPP = t.DescrptPP,
+                    EstBorneTemps = t.EstBorneTemps,
+                    DateDebut = t.DateDebut,
+                    DateFin = t.DateFin,
+                    EstLiéPP = t.EstLiéPP,
+                    EstLiéQuete = t.EstLiéQuete,
+                    EstLiéParti = t.EstLiéParti,
+                    QueteId = t.QueteId,
+                    ParentPPId = t.ParentPPId,
+                    ParentPPQueteId = t.ParentPPQueteId,
+                    PartiId = t.PartiId,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -771,7 +973,12 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.PNJ
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    NomPNJ = t.NomPNJ,
+                    DescrptPNJ = t.DescrptPNJ,
+                    DescrptCostume = t.DescrptCostume,
+                    DescrptAttitude = t.DescrptAttitude,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -793,7 +1000,12 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.PNJScene
                 {
-                    //récupérer les valeurs des champs
+                    PNJId = t.PNJId,
+                    SceneId = t.SceneId,
+                    DescriptionRoleScene = t.DescriptionRoleScene,
+                    Remarques = t.Remarques,
+                    Id = t.Id,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -813,10 +1025,7 @@ namespace ProsceneLite.DataAccess
                 var toGet = await context
                 ._Quete
                 .Where(t => t.Id == pId)
-                .Select(t => new Models.Quete
-                {
-                    //récupérer les valeurs des champs
-                })
+                .Select(t => new Models.Quete(t.Id,t.TitreQuete,t.ReferentId,t.StatuValidId,t.TypoQueteId,t.ProjetId,t.SynopsisQuete))
                 .FirstOrDefaultAsync();
                 return toGet;
             }
@@ -837,7 +1046,13 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.Scene
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    DateDebut = t.DateDebut,
+                    DateFin = t.DateFin,
+                    QueteId = t.QueteId,
+                    SpotId = t.SpotId,
+                    DescriptionScene = t.DescriptionScene,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -857,9 +1072,15 @@ namespace ProsceneLite.DataAccess
                 var toGet = await context
                 ._Spots
                 .Where(t => t.Id == pId)
+                .Select(t => new Models.Spots(t.Id,t.NomSpot,t.TypeSpotId,t.StatuValidId,t.Img))
                 .Select(t => new Models.Spots
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    NomSpot = t.NomSpot,
+                    TypeSpotId = t.TypeSpotId,
+                    StatuValidId = t.StatuValidId,
+                    Img = t.Img,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -881,7 +1102,9 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.TypoQuete
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    TypeQuete = t.TypeQuete,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;
@@ -903,7 +1126,9 @@ namespace ProsceneLite.DataAccess
                 .Where(t => t.Id == pId)
                 .Select(t => new Models.TypoSpot
                 {
-                    //récupérer les valeurs des champs
+                    Id = t.Id,
+                    TypeSpot = t.TypeSpot,
+
                 })
                 .FirstOrDefaultAsync();
                 return toGet;

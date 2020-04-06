@@ -11,8 +11,8 @@ namespace ProsceneLite.Models
 
         public Guid Id { get; set; }
         public string NomSpot { get; set; }
-        public Guid? TypeSpot { get; set; } //zone instanciée, décor en jeu, escape room etc...
-        public StatuValid StatuValidId { get; set; }
+        public Guid? TypeSpotId { get; set; }
+        public StatuValid? StatuValidId { get; set; }
         public Byte[] Img { get; set; }
 
         
@@ -21,11 +21,11 @@ namespace ProsceneLite.Models
 
         #region Constructeur
         public Spots() { }
-        public Spots(Guid pId, string pNom, Guid pTypeSpot, int pStatValid, Byte[] pImg)
+        public Spots(Guid pId, string pNom, Guid? pTypeSpot, int? pStatValid, Byte[] pImg)
         {
             Id = pId;
             NomSpot = pNom;
-            TypeSpot = pTypeSpot;
+            TypeSpotId = pTypeSpot;
             Img = pImg;
             StatuValidId=pStatValid switch
             {
